@@ -48,6 +48,9 @@ body {
   border-radius: 12px;
   text-align: center;
   transition: 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 .card:hover {
@@ -85,11 +88,6 @@ body {
 }
  section {
   border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-.card {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
 }
 
 @keyframes fadeInUp {
