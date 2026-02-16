@@ -5,11 +5,13 @@ body {
   color: #e6e6e6;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(145deg, #111827, #0b0f14);
+.hero h1 {
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(0,255,200,0.4);
 }
+
 
 .hero h1 {
   font-size: 3rem;
