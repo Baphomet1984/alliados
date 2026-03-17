@@ -719,7 +719,8 @@ bgCanvas.addEventListener('mousemove', e => {
   });
   if (hit) {
     tooltip.textContent = `◈ ${hit.fullName || hit.label}`;
-    tooltip.style.left = (mx + 14) + 'px';
+   if(mx > window.innerWidth - 150)
+   tooltip.style.left = mx - 150
     tooltip.style.top  = (my - 10) + 'px';
     tooltip.classList.add('visible');
     bgCanvas.style.cursor = 'pointer';
