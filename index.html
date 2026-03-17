@@ -624,7 +624,7 @@ let nodeIndex = 0;
 
 async function cargarAliados() {
   try {
-    const response = await fetch("aliados.json");
+    const response = await fetch("aliados.json?ts=" + Date.now());
     const aliados  = await response.json();
     const container = document.getElementById("alliadosContainer");
     const countEl   = document.getElementById("nodeCount");
