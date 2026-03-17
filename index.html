@@ -222,18 +222,19 @@ Enviar solicitud al sistema
 
 async function cargarAliados(){
 
-const response = await fetch("alliados.json");
+try{
+
+const response = await fetch("aliados.json");
 const aliados = await response.json();
 
 const container = document.getElementById("alliadosContainer");
 
-aliados.forEach(a=>{
+aliados.forEach(a => {
 
 const card = document.createElement("div");
-
 card.className="card";
 
-card.innerHTML = `
+card.innerHTML=`
 <div class="status">nodo_activo</div>
 <img src="${a.img}">
 <h3>${a.nombre}</h3>
@@ -245,11 +246,13 @@ container.appendChild(card);
 
 });
 
+}catch(error){
+
+console.error("Error cargando nodos:",error);
+
 }
 
-cargarAliados();
-
+}
 </script>
-
 </body>
 </html>
