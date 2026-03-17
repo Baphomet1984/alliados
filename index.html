@@ -1,96 +1,255 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aliados del Sistema</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="alliados.css">
+
+<title>Nodos del Sistema</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#050505;
+color:#e0e0e0;
+font-family:'Space Mono', monospace;
+overflow-x:hidden;
+}
+
+/* grid cyberpunk */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(rgba(0,255,200,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,200,0.05) 1px, transparent 1px);
+background-size:40px 40px;
+pointer-events:none;
+}
+
+/* hero */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:3em;
+color:#00ffc3;
+text-shadow:0 0 10px #00ffc3;
+}
+
+.hero p{
+color:#aaa;
+max-width:600px;
+margin:auto;
+}
+
+/* back */
+
+.back-btn{
+position:absolute;
+left:20px;
+top:20px;
+color:#ff3366;
+text-decoration:none;
+border:1px solid #ff3366;
+padding:8px 14px;
+transition:.3s;
+}
+
+.back-btn:hover{
+background:#ff3366;
+color:black;
+box-shadow:0 0 10px #ff3366;
+}
+
+/* nodos */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+padding:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:#0b0b0b;
+border:1px solid #00ffc3;
+padding:20px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,255,195,0.2);
+transition:.3s;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(0,255,195,0.6);
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.card h3{
+color:#00ffc3;
+margin:10px 0;
+}
+
+.card p{
+font-size:.9em;
+color:#aaa;
+}
+
+/* estado nodo */
+
+.status{
+font-size:.75em;
+color:#ff3366;
+margin-bottom:10px;
+}
+
+/* boton */
+
+.card a{
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+border:1px solid #ff3366;
+color:#ff3366;
+text-decoration:none;
+transition:.3s;
+}
+
+.card a:hover{
+background:#ff3366;
+color:black;
+box-shadow:0 0 10px #ff3366;
+}
+
+/* footer call */
+
+.cta{
+text-align:center;
+padding:80px 20px;
+}
+
+.cta h2{
+color:#00ffc3;
+}
+
+.cta p{
+max-width:600px;
+margin:auto;
+color:#aaa;
+}
+
+.cta a{
+display:inline-block;
+margin-top:20px;
+padding:12px 22px;
+border:1px solid #00ffc3;
+color:#00ffc3;
+text-decoration:none;
+transition:.3s;
+}
+
+.cta a:hover{
+background:#00ffc3;
+color:black;
+box-shadow:0 0 12px #00ffc3;
+}
+
+</style>
+
 </head>
+
 <body>
+
+<a href="https://baphomet1984.github.io/fail-news/" class="back-btn">← Volver</a>
 
 <section class="hero">
 
-  <a href="https://baphomet1984.github.io/fail-news/" class="back-btn">← Volver a News</a>
+<h1>Nodos del Sistema</h1>
 
-  <h1>Aliados del Sistema</h1>
-  <p>Proyectos independientes que decidieron crecer dentro del Hub.</p>
-</section>
-
-<section class="info">
-  <h2>¿Por qué unirte?</h2>
-  <p>
-    Nuestro ecosistema conecta con una comunidad específica, digital y activa.
-    No vendemos espacio. Creamos alianzas estratégicas.
-  </p>
-</section>
-
-<section class="planes">
-  <h2>Niveles de Alianza</h2>
-
-  <div class="plan">
-    <h3>Presencia Básica</h3>
-    <ul>
-      <li>Logo</li>
-      <li>Descripción breve</li>
-      <li>Enlace directo</li>
-    </ul>
-  </div>
-
-  <div class="plan destacado">
-    <h3>Aliado Destacado</h3>
-    <ul>
-      <li>Logo ampliado</li>
-      <li>Mini reseña</li>
-      <li>Banner o imagen</li>
-      <li>Mención en redes</li>
-    </ul>
-  </div>
-
-  <div class="plan">
-    <h3>Aliado Oficial</h3>
-    <ul>
-      <li>Todo lo anterior</li>
-      <li>Presencia en portada</li>
-      <li>Publicación dedicada</li>
-    </ul>
-  </div>
+<p>
+Proyectos independientes integrados a la red.
+Cada nodo aporta contenido, cultura o caos al flujo digital.
+</p>
 
 </section>
 
-<section class="grid-aliados">
-  <h2>Aliados Activos</h2>
 
- <div class="card">
-  <img src="../alliados/1771830044990.png" alt="Empresa">
-  <h3>THE TWIN DOGOS</h3>
-  <p>El mero sabor perrón!</p>
-  <a href="https://www.tiktok.com/@the_twin_dogos?_r=1&_t=ZS-949fxUuDW7t">Visitar</a>
-</div>
+<section class="grid" id="alliadosContainer">
 
-<div class="card">
-  <img src="../alliados/1771832573512.png" alt="Empresa">
-  <h3>MANDADITOS XONACATEPEC</h3>
-  <p>Servicio de paqueteria</p>
-  <a href="https://www.facebook.com/share/182Fm2eKF5/">Visitar</a>
-</div>
-
-<div class="card">
-  <img src="logo-ejemplo.png" alt="Empresa">
-  <h3>Nombre Empresa 3</h3>
-  <p>Descripción 3.</p>
-  <a href="#">Visitar</a>
-</div>
-
+<!-- JS carga aqui -->
 
 </section>
+
 
 <section class="cta">
-  <h2>Solicita tu Alianza</h2>
-  <p>Solo aceptamos proyectos que aporten valor real.
-Cada alianza es evaluada manualmente.</p>
-  <a href="https://chat.whatsapp.com/D7xEqrGxJgABFHbRQXM6tg?mode=gi_c" class="btn">Aplicar ahora</a>
+
+<h2>Solicitar Integración</h2>
+
+<p>
+El sistema analiza cada solicitud manualmente.
+Solo los proyectos que aporten valor real son integrados a la red.
+</p>
+
+<a href="https://chat.whatsapp.com/D7xEqrGxJgABFHbRQXM6tg?mode=gi_c">
+Enviar solicitud al sistema
+</a>
+
 </section>
+
+
+<script>
+
+async function cargarAliados(){
+
+const response = await fetch("alliados.json");
+const aliados = await response.json();
+
+const container = document.getElementById("alliadosContainer");
+
+aliados.forEach(a=>{
+
+const card = document.createElement("div");
+
+card.className="card";
+
+card.innerHTML = `
+<div class="status">nodo_activo</div>
+<img src="${a.img}">
+<h3>${a.nombre}</h3>
+<p>${a.desc}</p>
+<a href="${a.url}" target="_blank">Conectar</a>
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+cargarAliados();
+
+</script>
 
 </body>
 </html>
