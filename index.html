@@ -602,28 +602,28 @@ const HUB_LON = -98.1277;
 
 // Bounds that lock the view to Puebla state area
 const PUEBLA_BOUNDS = L.latLngBounds(
-  [18.95, -98.30],   // suroeste Puebla
-  [19.15, -98.05]    // noreste Puebla
+  [17.80, -99.10],  // SW corner
+  [20.85, -96.70]   // NE corner
 );
 
 const map = L.map('map', {
-  center: [19.0414, -98.2063],
-  zoom: 13,
+  center: [19.1000, -98.1500],
+  zoom: 8,
   zoomControl: false,
   attributionControl: false,
   scrollWheelZoom: false,
   dragging: false,
   doubleClickZoom: false,
   touchZoom: false,
-  minZoom: 12,
-  maxZoom: 16,
+  minZoom: 8,
+  maxZoom: 12,
   maxBounds: PUEBLA_BOUNDS,
   maxBoundsViscosity: 1.0,
 });
 
 // Force correct view once tiles load
 map.whenReady(() => {
-  map.setView([19.0414, -98.2063], 16);
+  map.setView([19.1000, -98.1500], 8);
 });
 
 // Dark tile layer — CartoDB Dark Matter
