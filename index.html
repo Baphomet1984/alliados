@@ -602,20 +602,20 @@ const HUB_LON = -98.1277;
 
 // Bounds that lock the view to Puebla state area
 const PUEBLA_BOUNDS = L.latLngBounds(
-  [17.80, -99.10],  // SW corner
-  [20.85, -96.70]   // NE corner
+  [18.70, -98.60],  // SW — Atlixco/Izúcar
+  [19.45, -97.70]   // NE — Tlaxcala linde
 );
 
 const map = L.map('map', {
-  center: [19.1000, -98.1500],
-  zoom: 8,
+  center: [19.0500, -98.2000],
+  zoom: 11,
   zoomControl: false,
   attributionControl: false,
   scrollWheelZoom: false,
   dragging: false,
   doubleClickZoom: false,
   touchZoom: false,
-  minZoom: 8,
+  minZoom: 10,
   maxZoom: 12,
   maxBounds: PUEBLA_BOUNDS,
   maxBoundsViscosity: 1.0,
@@ -623,7 +623,7 @@ const map = L.map('map', {
 
 // Force correct view once tiles load
 map.whenReady(() => {
-  map.setView([19.1000, -98.1500], 8);
+  map.setView([19.0500, -98.2000], 11);
 });
 
 // Dark tile layer — CartoDB Dark Matter
@@ -705,21 +705,21 @@ setInterval(tick, 1000); tick();
 // Default scatter positions around Puebla if aliado has no lat/lon
 // Spread across Mexico / Latin America for visual effect
 const DEFAULT_POSITIONS = [
-  [19.0414, -98.2063],   // Puebla ciudad
-  [18.8544, -97.0977],   // Tehuacán
-  [20.0740, -98.3600],   // Zacatlán
-  [19.9553, -97.9653],   // Chignahuapan
-  [18.7960, -98.9545],   // Izúcar de Matamoros
-  [19.6891, -98.1805],   // Tepeaca
-  [19.3145, -98.4330],   // Cholula
-  [20.1322, -97.6573],   // Huauchinango
-  [18.6025, -97.6600],   // Teotitlán
-  [19.4762, -97.9765],   // Tlaxcala (linde)
-  [19.1631, -98.4553],   // Atlixco
-  [18.9670, -97.4010],   // Tehuacán zona
-  [19.8520, -97.3820],   // Tulancingo linde
-  [19.1000, -97.7500],   // Mixteca poblana
-  [20.0200, -98.0500],   // Sierra Norte
+  [19.0550, -98.1950],   // Centro Puebla
+  [19.0630, -98.2380],   // San Andrés Cholula
+  [19.0580, -98.1620],   // San Martín Texmelucan zona
+  [19.0280, -98.2140],   // Analco / Sur
+  [19.0780, -98.1870],   // Norte Puebla
+  [19.0450, -98.2500],   // Cuautlancingo
+  [19.0190, -98.1760],   // Amozoc
+  [19.0900, -98.2100],   // Lomas de Angelópolis zona
+  [19.0350, -98.2300],   // Jardines / Poniente
+  [19.0680, -98.1650],   // Oriente Puebla
+  [19.0420, -98.1900],   // Zócalo área
+  [19.0750, -98.2400],   // Santa Clara Ocoyucan
+  [19.0260, -98.2050],   // Sur Tehuacán vía
+  [19.0830, -98.1780],   // Tecnológico / BUAP zona
+  [19.0490, -98.2200],   // Cholula pirámide zona
 ];
 
 async function cargarAliados() {
@@ -782,7 +782,7 @@ async function cargarAliados() {
 
       // Click card → fly map to that marker and open popup
       card.addEventListener('click', () => {
-        map.flyTo(pos, 10, { duration: 1.2 });
+        map.flyTo(pos, 13, { duration: 1.2 });
         setTimeout(() => marker.openPopup(), 1300);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
