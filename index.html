@@ -628,7 +628,18 @@ const map = L.map('map', {
 
 // Force correct view once tiles load
 map.whenReady(() => {
-  map.setView([19.0500, -98.2000], 11);
+  setTimeout(() => {
+    map.invalidateSize();
+    map.setView([19.0500, -98.2000], 11);
+  }, 300);
+});
+
+// Also invalidate on window load in case DOM wasn't ready
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    map.invalidateSize();
+    map.setView([19.0500, -98.2000], 11);
+  }, 400);
 });
 
 // Dark tile layer — CartoDB Dark Matter
@@ -787,9 +798,13 @@ async function cargarAliados() {
 
       // Click card → fly map to that marker and open popup
       card.addEventListener('click', () => {
-        map.flyTo(pos, 13, { duration: 1.2 });
-        setTimeout(() => marker.openPopup(), 1300);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const mapEl = document.getElementById('map');
+        mapEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => {
+          map.invalidateSize();
+          map.flyTo(pos, 13, { duration: 1.2 });
+        }, 500);
+        setTimeout(() => marker.openPopup(), 1800);
       });
 
       container.appendChild(card);
