@@ -546,9 +546,16 @@
 
   /* ── SEARCH BAR ── */
   .search-wrap {
-    width: 100%; max-width: 960px;
-    margin: 0 auto 1.5rem;
-    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(3,8,13,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,229,204,0.12);
+    padding: 0.6rem 1.5rem 0.4rem;
   }
   .search-wrap::before {
     content: '⌕';
@@ -559,6 +566,9 @@
   }
   #searchInput {
     width: 100%;
+    max-width: 960px;
+    display: block;
+    margin: 0 auto;
     background: rgba(0,229,204,0.03);
     border: 1px solid rgba(0,229,204,0.15);
     border-radius: 2px;
@@ -584,6 +594,9 @@
     text-align: right;
     margin-top: 0.4rem;
     text-transform: uppercase;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .node-card.hidden-card {
     display: none;
