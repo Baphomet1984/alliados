@@ -1,158 +1,162 @@
 [
-  {
-    "nombre": "MANDADITOS XONACATEPEC",
-    "desc": "Servicio de paquetería local",
-    "img": "/alliados/1771832573512.png",
-    "url": "https://www.facebook.com/share/182Fm2eKF5/",
-    "lat": "19.0872",
-    "lon": "-98.1039"
-  },
- {
-    "nombre": "THE TWIN DOGOS",
-    "desc": "El mero sabor perrón",
-    "img": "/alliados/1771830044990.png",
-    "url": "https://www.tiktok.com/@the_twin_dogos",
-    "lat": "19.0698",
-    "lon": "-98.1045"
-  },
-  {
-    "nombre": "Mercado de Sabores Poblanos",
-    "tipo": "restaurante / mercado gastronómico",
-    "lat": 19.0417,
-    "lon": -98.2060,
-    "descripcion": "Zona famosa para probar cemitas, mole y comida poblana económica."
-  },
-  {
-    "nombre": "El Parián",
-    "tipo": "mercado turístico",
-    "lat": 19.0439,
-    "lon": -98.1963,
-    "descripcion": "Mercado de artesanías muy visitado en el centro histórico." 
-  },
-  {
-    "nombre": "Mercado La Acocota",
-    "tipo": "mercado tradicional",
-    "lat": 19.0483,
-    "lon": -98.1889,
-    "descripcion": "Mercado clásico donde puedes comer antojitos poblanos baratos."
-  },
-  {
-    "nombre": "Centro Comercial Angelópolis",
-    "tipo": "centro comercial",
-    "lat": 19.0171,
-    "lon": -98.2341,
-    "descripcion": "Una de las plazas más famosas de Puebla." 
-  },
-  {
-    "nombre": "Explanada Puebla",
-    "tipo": "centro comercial",
-    "lat": 19.0715,
-    "lon": -98.3036,
-    "descripcion": "Centro comercial moderno con restaurantes y entretenimiento."
-  },
-  {
-    "nombre": "Galerías Serdán",
-    "tipo": "centro comercial",
-    "lat": 19.0706,
-    "lon": -98.2327,
-    "descripcion": "Plaza popular con cine y restaurantes."
-  },
-  {
-    "nombre": "Triángulo Las Ánimas",
-    "tipo": "centro comercial",
-    "lat": 19.0309,
-    "lon": -98.2353,
-    "descripcion": "Centro comercial pequeño con cafés y restaurantes."
-  },
-  {
-    "nombre": "Hotel San Pedro Puebla",
-    "tipo": "hotel",
-    "lat": 19.0441,
-    "lon": -98.1985,
-    "descripcion": "Hotel céntrico con precios accesibles."
-  },
-  {
-    "nombre": "Hotel Isabel",
-    "tipo": "hotel",
-    "lat": 19.0428,
-    "lon": -98.1987,
-    "descripcion": "Hotel económico cerca del Zócalo."
-  },
-  {
-    "nombre": "Hotel Boutique Casa Pepe",
-    "tipo": "hotel / hostel",
-    "lat": 19.0443,
-    "lon": -98.1974,
-    "descripcion": "Hostel moderno para viajeros jóvenes."
-  },
-  {
-    "nombre": "La Oriental",
-    "tipo": "restaurante",
-    "lat": 19.0410,
-    "lon": -98.2067,
-    "descripcion": "Cadena famosa por sus tacos árabes."
-  },
-  {
-    "nombre": "El Mural de los Poblanos",
-    "tipo": "restaurante",
-    "lat": 19.0437,
-    "lon": -98.1975,
-    "descripcion": "Restaurante tradicional con comida poblana."
-  },
-  {
-    "nombre": "Cemitas El Carmen",
-    "tipo": "restaurante",
-    "lat": 19.0359,
-    "lon": -98.1998,
-    "descripcion": "Lugar muy conocido para comer cemitas."
-  },
-  {
-    "nombre": "Café Tres Gallos",
-    "tipo": "cafetería",
-    "lat": 19.0433,
-    "lon": -98.1989,
-    "descripcion": "Café popular en el centro histórico."
-  },
-  {
-    "nombre": "Paseo Bravo",
-    "tipo": "parque / zona turística",
-    "lat": 19.0413,
-    "lon": -98.2058,
-    "descripcion": "Parque histórico ideal para caminar." 
-  },
-  {
-    "nombre": "Plaza Dorada",
-    "tipo": "centro comercial",
-    "lat": 19.0325,
-    "lon": -98.2112,
-    "descripcion": "Una de las plazas clásicas de Puebla."
-  },
-  {
-    "nombre": "Centro Comercial Crystal",
-    "tipo": "centro comercial",
-    "lat": 19.0318,
-    "lon": -98.2221,
-    "descripcion": "Plaza popular con tiendas y comida rápida."
-  },
-  {
-    "nombre": "Hotel Royalty",
-    "tipo": "hotel / restaurante",
-    "lat": 19.0439,
-    "lon": -98.1981,
-    "descripcion": "Hotel histórico frente al Zócalo."
-  },
-  {
-    "nombre": "La Casa del Mendrugo",
-    "tipo": "restaurante",
-    "lat": 19.0448,
-    "lon": -98.1959,
-    "descripcion": "Restaurante cultural con comida tradicional."
-  },
-  {
-    "nombre": "Zona Arqueológica de Cholula",
-    "tipo": "zona turística",
-    "lat": 19.0606,
-    "lon": -98.3035,
-    "descripcion": "La gran pirámide de Cholula, uno de los sitios más visitados cerca de Puebla."
-  }
+{
+"nombre": "MANDADITOS XONACATEPEC",
+"desc": "Servicio de paquetería local",
+"img": "/alliados/1771832573512.png",
+"url": "https://www.facebook.com/share/182Fm2eKF5/",
+"lat": "19.0872",
+"lon": "-98.1039"
+},
+{
+"nombre": "Tortillería La Tradicional",
+"desc": "Tortillas hechas a mano todos los días",
+"img": "/alliados/local1.png",
+"url": "https://facebook.com",
+"lat": "19.0880",
+"lon": "-98.1045"
+},
+{
+"nombre": "Taquería El Compadre",
+"desc": "Tacos al pastor y árabes",
+"img": "/alliados/local2.png",
+"url": "https://facebook.com",
+"lat": "19.0867",
+"lon": "-98.1028"
+},
+{
+"nombre": "Farmacia Xonacatepec",
+"desc": "Medicamentos y productos de salud",
+"img": "/alliados/local3.png",
+"url": "https://facebook.com",
+"lat": "19.0879",
+"lon": "-98.1019"
+},
+{
+"nombre": "Panadería La Espiga",
+"desc": "Pan dulce recién horneado",
+"img": "/alliados/local4.png",
+"url": "https://facebook.com",
+"lat": "19.0884",
+"lon": "-98.1030"
+},
+{
+"nombre": "Papelería Escolar Lupita",
+"desc": "Útiles escolares y copias",
+"img": "/alliados/local5.png",
+"url": "https://facebook.com",
+"lat": "19.0869",
+"lon": "-98.1042"
+},
+{
+"nombre": "Pollería Don Chuy",
+"desc": "Venta de pollo fresco",
+"img": "/alliados/local6.png",
+"url": "https://facebook.com",
+"lat": "19.0875",
+"lon": "-98.1051"
+},
+{
+"nombre": "Refaccionaria El Pistón",
+"desc": "Refacciones automotrices",
+"img": "/alliados/local7.png",
+"url": "https://facebook.com",
+"lat": "19.0890",
+"lon": "-98.1037"
+},
+{
+"nombre": "Tienda La Esquina",
+"desc": "Abarrotes y productos básicos",
+"img": "/alliados/local8.png",
+"url": "https://facebook.com",
+"lat": "19.0882",
+"lon": "-98.1021"
+},
+{
+"nombre": "Barbería El Estilo",
+"desc": "Cortes modernos y clásicos",
+"img": "/alliados/local9.png",
+"url": "https://facebook.com",
+"lat": "19.0871",
+"lon": "-98.1015"
+},
+{
+"nombre": "Ferretería San José",
+"desc": "Herramientas y materiales de construcción",
+"img": "/alliados/local10.png",
+"url": "https://facebook.com",
+"lat": "19.0887",
+"lon": "-98.1048"
+},
+{
+"nombre": "Ciber XonaNet",
+"desc": "Internet, impresiones y escaneo",
+"img": "/alliados/local11.png",
+"url": "https://facebook.com",
+"lat": "19.0865",
+"lon": "-98.1034"
+},
+{
+"nombre": "Lonchería Doña Mari",
+"desc": "Antojitos y comida casera",
+"img": "/alliados/local12.png",
+"url": "https://facebook.com",
+"lat": "19.0878",
+"lon": "-98.1026"
+},
+{
+"nombre": "Mini Super Hernández",
+"desc": "Abarrotes y bebidas",
+"img": "/alliados/local13.png",
+"url": "https://facebook.com",
+"lat": "19.0889",
+"lon": "-98.1018"
+},
+{
+"nombre": "Taller Mecánico El Rayo",
+"desc": "Reparación de autos y motos",
+"img": "/alliados/local14.png",
+"url": "https://facebook.com",
+"lat": "19.0868",
+"lon": "-98.1054"
+},
+{
+"nombre": "Jugos y Licuados Vida",
+"desc": "Bebidas naturales y saludables",
+"img": "/alliados/local15.png",
+"url": "https://facebook.com",
+"lat": "19.0873",
+"lon": "-98.1023"
+},
+{
+"nombre": "Estética Bella Imagen",
+"desc": "Cortes, tintes y maquillaje",
+"img": "/alliados/local16.png",
+"url": "https://facebook.com",
+"lat": "19.0881",
+"lon": "-98.1036"
+},
+{
+"nombre": "Pizzería Don Luigi",
+"desc": "Pizzas artesanales",
+"img": "/alliados/local17.png",
+"url": "https://facebook.com",
+"lat": "19.0892",
+"lon": "-98.1029"
+},
+{
+"nombre": "Lavandería Burbuja",
+"desc": "Servicio de lavado y secado",
+"img": "/alliados/local18.png",
+"url": "https://facebook.com",
+"lat": "19.0876",
+"lon": "-98.1049"
+},
+{
+"nombre": "Cremería La Vaquita",
+"desc": "Quesos, crema y lácteos",
+"img": "/alliados/local19.png",
+"url": "https://facebook.com",
+"lat": "19.0886",
+"lon": "-98.1024"
+}
 ]
