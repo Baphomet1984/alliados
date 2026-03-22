@@ -4,14 +4,70 @@
     "desc": "Servicio de paquetería y mandados locales en la colonia.",
     "img": "/alliados/1771832573512.png",
     "url": "https://www.facebook.com/share/182Fm2eKF5/",
+    "telefono": "",
     "lat": "19.0872",
     "lon": "-98.1039"
+  },
+  {
+    "nombre": "CENTRAL DE TAXIS PARQUE COLÓN",
+    "desc": "Base de taxis en Col. Santa María Xonacatepec. Calle Eucalipto, CP 72229. Transporte de pasajeros 24/7.",
+    "img": "/alliados/taxi-parque-colon.png",
+    "url": "https://www.google.com/maps/search/Central+de+Taxis+Parque+Colon+Xonacatepec+Eucalipto+Puebla",
+    "telefono": "222 445 8508",
+    "lat": "19.0880",
+    "lon": "-98.1042"
+  },
+  {
+    "nombre": "CENTRAL DE TAXIS BASE LA CRUZ",
+    "desc": "Base de taxis con servicio 24/7. Santa María Xonacatepec, Puebla. Confianza y preferencia garantizada.",
+    "img": "/alliados/taxi-la-cruz.png",
+    "url": "https://www.facebook.com/p/Central-de-Taxis-Xonacatepec-100063965493377/",
+    "telefono": "",
+    "lat": "19.0868",
+    "lon": "-98.1030"
+  },
+  {
+    "nombre": "TAXISTAS PARQUE COLÓN XONACATEPEC",
+    "desc": "Central de taxis en Av. Cristóbal Colón 1, Junta Auxiliar Santa María Xonacatepec CP 72940.",
+    "img": "/alliados/taxi-cristobal-colon.png",
+    "url": "https://www.google.com/maps/search/Taxistas+Parque+Colon+Avenida+Cristobal+Colon+1+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
+    "lat": "19.0891",
+    "lon": "-98.1055"
+  },
+  {
+    "nombre": "BASE DE TAXIS VILLAS GUADALUPE",
+    "desc": "Base de taxis en Villa Guadalupe, Santa María Xonacatepec CP 72229. Servicio local y foráneo.",
+    "img": "/alliados/taxi-villas-guadalupe.png",
+    "url": "https://www.google.com/maps/search/Base+Taxis+Villas+Guadalupe+Xonacatepec+Puebla",
+    "telefono": "222 845 1346",
+    "lat": "19.0855",
+    "lon": "-98.1015"
+  },
+  {
+    "nombre": "TAXI BOSQUES XONACATEPEC",
+    "desc": "Servicio de taxi en zona Bosques de San Sebastián, área Xonacatepec. Blvd. Monterrey 33.",
+    "img": "/alliados/taxi-bosques.png",
+    "url": "https://www.google.com/maps/search/Taxi+Bosques+Blvd+Monterrey+33+Bosques+San+Sebastian+Puebla",
+    "telefono": "222 218 2000",
+    "lat": "19.0910",
+    "lon": "-98.1068"
+  },
+  {
+    "nombre": "TAXI SERVICIO INDEPENDENCIA",
+    "desc": "Servicio de taxi en Calle Independencia No. 17, Santa María Xonacatepec. Servicio local.",
+    "img": "/alliados/taxi-independencia.png",
+    "url": "https://www.google.com/maps/search/Taxi+Calle+Independencia+17+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "244 111 93...",
+    "lat": "19.0862",
+    "lon": "-98.1048"
   },
   {
     "nombre": "BENY PIZZAS",
     "desc": "Pizzas, hamburguesas y hot dogs para llevar. Av. Cristóbal Colón, Santa María Xonacatepec.",
     "img": "/alliados/beny-pizzas.png",
     "url": "https://www.google.com/maps/search/Beny+Pizzas+Av+Cristobal+Colon+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0891",
     "lon": "-98.1055"
   },
@@ -20,6 +76,7 @@
     "desc": "Pollos rostizados y comida para llevar. Colonia Santa María Xonacatepec.",
     "img": "/alliados/rosticeria-bertha.png",
     "url": "https://www.google.com/maps/search/Rosticeria+Bertha+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0880",
     "lon": "-98.1025"
   },
@@ -28,6 +85,7 @@
     "desc": "Pollos al carbón y comida para llevar. Colonia Santa María Xonacatepec.",
     "img": "/alliados/rosticeria-ariana.png",
     "url": "https://www.google.com/maps/search/Rosticeria+Ariana+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0865",
     "lon": "-98.1048"
   },
@@ -36,6 +94,7 @@
     "desc": "Tacos y tortas. Av. Xonacatepec esq. B. Juárez, colonia San Miguel Xonacatepec.",
     "img": "/alliados/taqueria-los-pinos.png",
     "url": "https://www.google.com/maps/search/Taqueria+Los+Pinos+Avenida+Xonacatepec+San+Miguel+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0855",
     "lon": "-98.1070"
   },
@@ -44,6 +103,7 @@
     "desc": "Pizzas, hamburguesas y pollos rostizados. Calle Barrio del Cristo esq. Cuitláhuac.",
     "img": "/alliados/rosticeria-cristo.png",
     "url": "https://www.google.com/maps/search/Rosticeria+Calle+Barrio+del+Cristo+Cuitlahuac+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0834",
     "lon": "-98.1032"
   },
@@ -52,6 +112,7 @@
     "desc": "Pollos a la leña y comida regional. Colonia Guadalupe Xonacatepec.",
     "img": "/alliados/pollos-guerrero.png",
     "url": "https://www.google.com/maps/search/Pollos+Guerrero+Guadalupe+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0820",
     "lon": "-98.0998"
   },
@@ -60,6 +121,7 @@
     "desc": "Pollos rostizados y antojitos. Colonia Guadalupe Xonacatepec.",
     "img": "/alliados/el-compadre.png",
     "url": "https://www.google.com/maps/search/Rosticeria+El+Compadre+Guadalupe+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0815",
     "lon": "-98.1010"
   },
@@ -68,22 +130,16 @@
     "desc": "Pizzas artesanales a la leña. Colonia Jardines de San José, zona Xonacatepec.",
     "img": "/alliados/rey-de-reyes.png",
     "url": "https://www.google.com/maps/search/Pizzas+a+la+Lena+Rey+de+Reyes+Jardines+San+Jose+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0843",
     "lon": "-98.0980"
-  },
-  {
-    "nombre": "ROSTICERÍA MI PEQUEÑA LULÚ",
-    "desc": "Pollos rostizados y comida para llevar. Colonia Jardines de San José.",
-    "img": "/alliados/pequena-lulu.png",
-    "url": "https://www.google.com/maps/search/Rosticeria+Mi+Pequena+Lulu+Jardines+San+Jose+Xonacatepec+Puebla",
-    "lat": "19.0850",
-    "lon": "-98.0965"
   },
   {
     "nombre": "TIANGUIS XONACATEPEC",
     "desc": "Mercado semanal con productos frescos, ropa y abarrotes. Santa María Xonacatepec.",
     "img": "/alliados/tianguis.png",
     "url": "https://www.google.com/maps/search/Tianguis+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0875",
     "lon": "-98.1042"
   },
@@ -92,70 +148,34 @@
     "desc": "Medicamentos, consulta médica y artículos de salud. Blvd. Xonacatepec.",
     "img": "/alliados/farmacia-ahorro.png",
     "url": "https://www.google.com/maps/search/Farmacia+del+Ahorro+Boulevard+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0895",
     "lon": "-98.1060"
-  },
-  {
-    "nombre": "OXXO BLVD. XONACATEPEC",
-    "desc": "Tienda de conveniencia 24 horas. Blvd. Xonacatepec, Puebla.",
-    "img": "/alliados/oxxo.png",
-    "url": "https://www.google.com/maps/search/OXXO+Boulevard+Xonacatepec+Puebla",
-    "lat": "19.0902",
-    "lon": "-98.1035"
   },
   {
     "nombre": "CHEDRAUI XONACATEPEC",
     "desc": "Supermercado completo. Blvd. Xonacatepec 174, Bosques de San Sebastián.",
     "img": "/alliados/chedraui.png",
     "url": "https://www.google.com/maps/search/Chedraui+Boulevard+Xonacatepec+174+Bosques+San+Sebastian+Puebla",
+    "telefono": "",
     "lat": "19.0910",
     "lon": "-98.1075"
-  },
-  {
-    "nombre": "BBVA XONACATEPEC",
-    "desc": "Servicios bancarios, cajeros automáticos y atención al cliente.",
-    "img": "/alliados/bbva.png",
-    "url": "https://www.google.com/maps/search/BBVA+Boulevard+Xonacatepec+Puebla",
-    "lat": "19.0888",
-    "lon": "-98.1050"
   },
   {
     "nombre": "FERRETERÍA SAN MIGUEL",
     "desc": "Materiales de construcción, herramientas y pinturas. Col. San Miguel Xonacatepec.",
     "img": "/alliados/ferreteria.png",
     "url": "https://www.google.com/maps/search/Ferreteria+San+Miguel+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0858",
     "lon": "-98.1080"
-  },
-  {
-    "nombre": "PAPELERÍA XONA",
-    "desc": "Útiles escolares, impresiones y copias. Servicio a estudiantes y oficinas.",
-    "img": "/alliados/papeleria.png",
-    "url": "https://www.google.com/maps/search/Papeleria+Santa+Maria+Xonacatepec+Puebla",
-    "lat": "19.0868",
-    "lon": "-98.1022"
-  },
-  {
-    "nombre": "ESTÉTICA XONACATEPEC",
-    "desc": "Cortes, peinados y tintes para dama y caballero. Colonia Santa María Xonacatepec.",
-    "img": "/alliados/estetica.png",
-    "url": "https://www.google.com/maps/search/Estetica+Santa+Maria+Xonacatepec+Puebla",
-    "lat": "19.0862",
-    "lon": "-98.1035"
-  },
-  {
-    "nombre": "TORTILLERÍA LA ESPERANZA",
-    "desc": "Tortillas frescas de maíz producción diaria. Santa María Xonacatepec.",
-    "img": "/alliados/tortilleria.png",
-    "url": "https://www.google.com/maps/search/Tortilleria+Santa+Maria+Xonacatepec+Puebla",
-    "lat": "19.0878",
-    "lon": "-98.1015"
   },
   {
     "nombre": "ABARROTES DON CHELO",
     "desc": "Tienda de abarrotes, refrescos y productos de primera necesidad.",
     "img": "/alliados/abarrotes.png",
     "url": "https://www.google.com/maps/search/Abarrotes+Santa+Maria+Xonacatepec+Puebla",
+    "telefono": "",
     "lat": "19.0845",
     "lon": "-98.1048"
   }
