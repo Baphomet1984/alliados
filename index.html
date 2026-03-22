@@ -526,6 +526,69 @@
     from{opacity:0;transform:translateY(12px);}
     to{opacity:1;transform:translateY(0);}
   }
+
+  /* ── PHONE ROW ── */
+  .node-phone {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.58rem; letter-spacing: 0.12em;
+    color: var(--green);
+    padding: 0.55rem 1.2rem;
+    border-top: 1px solid rgba(0,229,204,0.08);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .node-phone::before { content: '◉'; opacity: 0.5; font-size: 0.5rem; }
+  .node-phone a {
+    color: var(--green); text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .node-phone a:hover { opacity: 0.7; }
+  .node-phone.no-phone { display: none; }
+
+  /* ── SEARCH BAR ── */
+  .search-wrap {
+    width: 100%; max-width: 960px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+  }
+  .search-wrap::before {
+    content: '⌕';
+    position: absolute; left: 14px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem; color: rgba(0,229,204,0.4);
+    pointer-events: none; z-index: 1;
+  }
+  #searchInput {
+    width: 100%;
+    background: rgba(0,229,204,0.03);
+    border: 1px solid rgba(0,229,204,0.15);
+    border-radius: 2px;
+    color: var(--white);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.12em;
+    padding: 0.7rem 1rem 0.7rem 2.4rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  #searchInput::placeholder {
+    color: rgba(0,229,204,0.25);
+    letter-spacing: 0.15em;
+  }
+  #searchInput:focus {
+    border-color: rgba(0,229,204,0.4);
+    box-shadow: 0 0 16px rgba(0,229,204,0.08);
+  }
+  .search-count {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.5rem; letter-spacing: 0.18em;
+    color: rgba(0,229,204,0.35);
+    text-align: right;
+    margin-top: 0.4rem;
+    text-transform: uppercase;
+  }
+  .node-card.hidden-card {
+    display: none;
+  }
+
 </style>
 </head>
 <body>
@@ -582,7 +645,13 @@
     </a>
   </div>
 
-    <!-- ══ MAP SECTION ══ -->
+  <!-- ══ SEARCH BAR ══ -->
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="// BUSCAR NODO... escribe un nombre" autocomplete="off" spellcheck="false">
+    <div class="search-count" id="searchCount"></div>
+  </div>
+
+      <!-- ══ MAP SECTION ══ -->
 <!-- ══ MAP FULL SCREEN ══ -->
 <div class="map-section">
   <div id="map"></div>
@@ -791,6 +860,7 @@ async function cargarAliados() {
           <span class="pop-name">◈ ${a.nombre.toUpperCase()}</span>
           <span class="pop-status">// SEÑAL DETECTADA · NODO_${String(i+1).padStart(3,'0')}</span><br>
           <span style="color:rgba(0,229,204,0.5)">LAT ${pos[0].toFixed(4)}° · LON ${pos[1].toFixed(4)}°</span><br>
+          ${a.telefono ? `<br><span style="color:var(--green)">◉ ${a.telefono}</span>` : ''}
           <a class="pop-link" href="${a.url}" target="_blank">→ CONECTAR</a>
         `, { maxWidth: 220 });
 
@@ -812,6 +882,7 @@ async function cargarAliados() {
           <div class="node-name">${a.nombre}</div>
           <div class="node-desc">${a.desc}</div>
         </div>
+        ${a.telefono ? `<div class="node-phone"><a href="tel:${a.telefono}">${a.telefono}</a></div>` : '<div class="node-phone no-phone"></div>'}
         <a class="node-btn" href="${a.url}" target="_blank">
           <span>Conectar al nodo</span>
         </a>
@@ -831,6 +902,8 @@ async function cargarAliados() {
       container.appendChild(card);
     });
 
+    initSearch(aliados.length);
+
   } catch (err) {
     console.error("Error cargando nodos:", err);
     document.getElementById("alliadosContainer").innerHTML =
@@ -838,6 +911,35 @@ async function cargarAliados() {
     document.getElementById("nodeCount").textContent = "── CONEXIÓN FALLIDA";
     document.getElementById("signalCount").textContent = "// 0 SEÑALES ACTIVAS";
   }
+}
+
+
+// ── SEARCH ────────────────────────────────────────────────────────
+function initSearch(total) {
+  const input = document.getElementById('searchInput');
+  const countEl = document.getElementById('searchCount');
+
+  function updateCount(visible) {
+    countEl.textContent = visible === total
+      ? `// ${total} nodos en red`
+      : `// ${visible} de ${total} nodos encontrados`;
+  }
+
+  updateCount(total);
+
+  input.addEventListener('input', () => {
+    const query = input.value.trim().toLowerCase();
+    const cards = document.querySelectorAll('.node-card');
+    let visible = 0;
+    cards.forEach(card => {
+      const name = card.querySelector('.node-name')?.textContent.toLowerCase() || '';
+      const desc = card.querySelector('.node-desc')?.textContent.toLowerCase() || '';
+      const match = !query || name.includes(query) || desc.includes(query);
+      card.classList.toggle('hidden-card', !match);
+      if (match) visible++;
+    });
+    updateCount(visible);
+  });
 }
 
 cargarAliados();
