@@ -14,5 +14,145 @@
     "url": "https://www.tiktok.com/@the_twin_dogos",
     "lat": "19.0698",
     "lon": "-98.1045"
+  },
+  {
+    "nombre": "Mercado de Sabores Poblanos",
+    "tipo": "restaurante / mercado gastronómico",
+    "lat": 19.0417,
+    "lon": -98.2060,
+    "descripcion": "Zona famosa para probar cemitas, mole y comida poblana económica."
+  },
+  {
+    "nombre": "El Parián",
+    "tipo": "mercado turístico",
+    "lat": 19.0439,
+    "lon": -98.1963,
+    "descripcion": "Mercado de artesanías muy visitado en el centro histórico." 
+  },
+  {
+    "nombre": "Mercado La Acocota",
+    "tipo": "mercado tradicional",
+    "lat": 19.0483,
+    "lon": -98.1889,
+    "descripcion": "Mercado clásico donde puedes comer antojitos poblanos baratos."
+  },
+  {
+    "nombre": "Centro Comercial Angelópolis",
+    "tipo": "centro comercial",
+    "lat": 19.0171,
+    "lon": -98.2341,
+    "descripcion": "Una de las plazas más famosas de Puebla." 
+  },
+  {
+    "nombre": "Explanada Puebla",
+    "tipo": "centro comercial",
+    "lat": 19.0715,
+    "lon": -98.3036,
+    "descripcion": "Centro comercial moderno con restaurantes y entretenimiento."
+  },
+  {
+    "nombre": "Galerías Serdán",
+    "tipo": "centro comercial",
+    "lat": 19.0706,
+    "lon": -98.2327,
+    "descripcion": "Plaza popular con cine y restaurantes."
+  },
+  {
+    "nombre": "Triángulo Las Ánimas",
+    "tipo": "centro comercial",
+    "lat": 19.0309,
+    "lon": -98.2353,
+    "descripcion": "Centro comercial pequeño con cafés y restaurantes."
+  },
+  {
+    "nombre": "Hotel San Pedro Puebla",
+    "tipo": "hotel",
+    "lat": 19.0441,
+    "lon": -98.1985,
+    "descripcion": "Hotel céntrico con precios accesibles."
+  },
+  {
+    "nombre": "Hotel Isabel",
+    "tipo": "hotel",
+    "lat": 19.0428,
+    "lon": -98.1987,
+    "descripcion": "Hotel económico cerca del Zócalo."
+  },
+  {
+    "nombre": "Hotel Boutique Casa Pepe",
+    "tipo": "hotel / hostel",
+    "lat": 19.0443,
+    "lon": -98.1974,
+    "descripcion": "Hostel moderno para viajeros jóvenes."
+  },
+  {
+    "nombre": "La Oriental",
+    "tipo": "restaurante",
+    "lat": 19.0410,
+    "lon": -98.2067,
+    "descripcion": "Cadena famosa por sus tacos árabes."
+  },
+  {
+    "nombre": "El Mural de los Poblanos",
+    "tipo": "restaurante",
+    "lat": 19.0437,
+    "lon": -98.1975,
+    "descripcion": "Restaurante tradicional con comida poblana."
+  },
+  {
+    "nombre": "Cemitas El Carmen",
+    "tipo": "restaurante",
+    "lat": 19.0359,
+    "lon": -98.1998,
+    "descripcion": "Lugar muy conocido para comer cemitas."
+  },
+  {
+    "nombre": "Café Tres Gallos",
+    "tipo": "cafetería",
+    "lat": 19.0433,
+    "lon": -98.1989,
+    "descripcion": "Café popular en el centro histórico."
+  },
+  {
+    "nombre": "Paseo Bravo",
+    "tipo": "parque / zona turística",
+    "lat": 19.0413,
+    "lon": -98.2058,
+    "descripcion": "Parque histórico ideal para caminar." 
+  },
+  {
+    "nombre": "Plaza Dorada",
+    "tipo": "centro comercial",
+    "lat": 19.0325,
+    "lon": -98.2112,
+    "descripcion": "Una de las plazas clásicas de Puebla."
+  },
+  {
+    "nombre": "Centro Comercial Crystal",
+    "tipo": "centro comercial",
+    "lat": 19.0318,
+    "lon": -98.2221,
+    "descripcion": "Plaza popular con tiendas y comida rápida."
+  },
+  {
+    "nombre": "Hotel Royalty",
+    "tipo": "hotel / restaurante",
+    "lat": 19.0439,
+    "lon": -98.1981,
+    "descripcion": "Hotel histórico frente al Zócalo."
+  },
+  {
+    "nombre": "La Casa del Mendrugo",
+    "tipo": "restaurante",
+    "lat": 19.0448,
+    "lon": -98.1959,
+    "descripcion": "Restaurante cultural con comida tradicional."
+  },
+  {
+    "nombre": "Zona Arqueológica de Cholula",
+    "tipo": "zona turística",
+    "lat": 19.0606,
+    "lon": -98.3035,
+    "descripcion": "La gran pirámide de Cholula, uno de los sitios más visitados cerca de Puebla."
   }
 ]
