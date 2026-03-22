@@ -625,18 +625,29 @@ const map = L.map('map', {
 
 // Force correct view once tiles load
 map.whenReady(() => {
-  setTimeout(() => {
-    map.invalidateSize();
-    map.setView([19.0872, -98.1039], 13);
-  }, 300);
+  [100, 300, 600, 1000].forEach(delay => {
+    setTimeout(() => {
+      map.invalidateSize({ animate: false });
+      map.setView([19.0872, -98.1039], 13);
+    }, delay);
+  });
 });
 
-// Also invalidate on window load in case DOM wasn't ready
 window.addEventListener('load', () => {
+  [200, 500, 1000].forEach(delay => {
+    setTimeout(() => {
+      map.invalidateSize({ animate: false });
+      map.setView([19.0872, -98.1039], 13);
+    }, delay);
+  });
+});
+
+// Also on resize (orientation change on mobile)
+window.addEventListener('resize', () => {
   setTimeout(() => {
-    map.invalidateSize();
+    map.invalidateSize({ animate: false });
     map.setView([19.0872, -98.1039], 13);
-  }, 400);
+  }, 200);
 });
 
 // Dark tile layer — CartoDB Dark Matter
