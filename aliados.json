@@ -1,162 +1,162 @@
 [
-{
-"nombre": "MANDADITOS XONACATEPEC",
-"desc": "Servicio de paquetería local",
-"img": "/alliados/1771832573512.png",
-"url": "https://www.facebook.com/share/182Fm2eKF5/",
-"lat": "19.0872",
-"lon": "-98.1039"
-},
-{
-"nombre": "Tortillería La Tradicional",
-"desc": "Tortillas hechas a mano todos los días",
-"img": "/alliados/local1.png",
-"url": "https://facebook.com",
-"lat": "19.0880",
-"lon": "-98.1045"
-},
-{
-"nombre": "Taquería El Compadre",
-"desc": "Tacos al pastor y árabes",
-"img": "/alliados/local2.png",
-"url": "https://facebook.com",
-"lat": "19.0867",
-"lon": "-98.1028"
-},
-{
-"nombre": "Farmacia Xonacatepec",
-"desc": "Medicamentos y productos de salud",
-"img": "/alliados/local3.png",
-"url": "https://facebook.com",
-"lat": "19.0879",
-"lon": "-98.1019"
-},
-{
-"nombre": "Panadería La Espiga",
-"desc": "Pan dulce recién horneado",
-"img": "/alliados/local4.png",
-"url": "https://facebook.com",
-"lat": "19.0884",
-"lon": "-98.1030"
-},
-{
-"nombre": "Papelería Escolar Lupita",
-"desc": "Útiles escolares y copias",
-"img": "/alliados/local5.png",
-"url": "https://facebook.com",
-"lat": "19.0869",
-"lon": "-98.1042"
-},
-{
-"nombre": "Pollería Don Chuy",
-"desc": "Venta de pollo fresco",
-"img": "/alliados/local6.png",
-"url": "https://facebook.com",
-"lat": "19.0875",
-"lon": "-98.1051"
-},
-{
-"nombre": "Refaccionaria El Pistón",
-"desc": "Refacciones automotrices",
-"img": "/alliados/local7.png",
-"url": "https://facebook.com",
-"lat": "19.0890",
-"lon": "-98.1037"
-},
-{
-"nombre": "Tienda La Esquina",
-"desc": "Abarrotes y productos básicos",
-"img": "/alliados/local8.png",
-"url": "https://facebook.com",
-"lat": "19.0882",
-"lon": "-98.1021"
-},
-{
-"nombre": "Barbería El Estilo",
-"desc": "Cortes modernos y clásicos",
-"img": "/alliados/local9.png",
-"url": "https://facebook.com",
-"lat": "19.0871",
-"lon": "-98.1015"
-},
-{
-"nombre": "Ferretería San José",
-"desc": "Herramientas y materiales de construcción",
-"img": "/alliados/local10.png",
-"url": "https://facebook.com",
-"lat": "19.0887",
-"lon": "-98.1048"
-},
-{
-"nombre": "Ciber XonaNet",
-"desc": "Internet, impresiones y escaneo",
-"img": "/alliados/local11.png",
-"url": "https://facebook.com",
-"lat": "19.0865",
-"lon": "-98.1034"
-},
-{
-"nombre": "Lonchería Doña Mari",
-"desc": "Antojitos y comida casera",
-"img": "/alliados/local12.png",
-"url": "https://facebook.com",
-"lat": "19.0878",
-"lon": "-98.1026"
-},
-{
-"nombre": "Mini Super Hernández",
-"desc": "Abarrotes y bebidas",
-"img": "/alliados/local13.png",
-"url": "https://facebook.com",
-"lat": "19.0889",
-"lon": "-98.1018"
-},
-{
-"nombre": "Taller Mecánico El Rayo",
-"desc": "Reparación de autos y motos",
-"img": "/alliados/local14.png",
-"url": "https://facebook.com",
-"lat": "19.0868",
-"lon": "-98.1054"
-},
-{
-"nombre": "Jugos y Licuados Vida",
-"desc": "Bebidas naturales y saludables",
-"img": "/alliados/local15.png",
-"url": "https://facebook.com",
-"lat": "19.0873",
-"lon": "-98.1023"
-},
-{
-"nombre": "Estética Bella Imagen",
-"desc": "Cortes, tintes y maquillaje",
-"img": "/alliados/local16.png",
-"url": "https://facebook.com",
-"lat": "19.0881",
-"lon": "-98.1036"
-},
-{
-"nombre": "Pizzería Don Luigi",
-"desc": "Pizzas artesanales",
-"img": "/alliados/local17.png",
-"url": "https://facebook.com",
-"lat": "19.0892",
-"lon": "-98.1029"
-},
-{
-"nombre": "Lavandería Burbuja",
-"desc": "Servicio de lavado y secado",
-"img": "/alliados/local18.png",
-"url": "https://facebook.com",
-"lat": "19.0876",
-"lon": "-98.1049"
-},
-{
-"nombre": "Cremería La Vaquita",
-"desc": "Quesos, crema y lácteos",
-"img": "/alliados/local19.png",
-"url": "https://facebook.com",
-"lat": "19.0886",
-"lon": "-98.1024"
-}
+  {
+    "nombre": "MANDADITOS XONACATEPEC",
+    "desc": "Servicio de paquetería y mandados locales en la colonia.",
+    "img": "/alliados/1771832573512.png",
+    "url": "https://www.facebook.com/share/182Fm2eKF5/",
+    "lat": "19.0872",
+    "lon": "-98.1039"
+  },
+  {
+    "nombre": "BENY PIZZAS",
+    "desc": "Pizzas, hamburguesas y hot dogs para llevar. Av. Cristóbal Colón, Santa María Xonacatepec.",
+    "img": "/alliados/beny-pizzas.png",
+    "url": "https://www.google.com/maps/search/Beny+Pizzas+Av+Cristobal+Colon+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0891",
+    "lon": "-98.1055"
+  },
+  {
+    "nombre": "ROSTICERÍA BERTHA",
+    "desc": "Pollos rostizados y comida para llevar. Colonia Santa María Xonacatepec.",
+    "img": "/alliados/rosticeria-bertha.png",
+    "url": "https://www.google.com/maps/search/Rosticeria+Bertha+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0880",
+    "lon": "-98.1025"
+  },
+  {
+    "nombre": "ROSTICERÍA ARIANA",
+    "desc": "Pollos al carbón y comida para llevar. Colonia Santa María Xonacatepec.",
+    "img": "/alliados/rosticeria-ariana.png",
+    "url": "https://www.google.com/maps/search/Rosticeria+Ariana+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0865",
+    "lon": "-98.1048"
+  },
+  {
+    "nombre": "TAQUERÍA LOS PINOS",
+    "desc": "Tacos y tortas. Av. Xonacatepec esq. B. Juárez, colonia San Miguel Xonacatepec.",
+    "img": "/alliados/taqueria-los-pinos.png",
+    "url": "https://www.google.com/maps/search/Taqueria+Los+Pinos+Avenida+Xonacatepec+San+Miguel+Xonacatepec+Puebla",
+    "lat": "19.0855",
+    "lon": "-98.1070"
+  },
+  {
+    "nombre": "ROSTICERÍA BARRIO DEL CRISTO",
+    "desc": "Pizzas, hamburguesas y pollos rostizados. Calle Barrio del Cristo esq. Cuitláhuac.",
+    "img": "/alliados/rosticeria-cristo.png",
+    "url": "https://www.google.com/maps/search/Rosticeria+Calle+Barrio+del+Cristo+Cuitlahuac+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0834",
+    "lon": "-98.1032"
+  },
+  {
+    "nombre": "POLLOS GUERRERO",
+    "desc": "Pollos a la leña y comida regional. Colonia Guadalupe Xonacatepec.",
+    "img": "/alliados/pollos-guerrero.png",
+    "url": "https://www.google.com/maps/search/Pollos+Guerrero+Guadalupe+Xonacatepec+Puebla",
+    "lat": "19.0820",
+    "lon": "-98.0998"
+  },
+  {
+    "nombre": "ROSTICERÍA EL COMPADRE",
+    "desc": "Pollos rostizados y antojitos. Colonia Guadalupe Xonacatepec.",
+    "img": "/alliados/el-compadre.png",
+    "url": "https://www.google.com/maps/search/Rosticeria+El+Compadre+Guadalupe+Xonacatepec+Puebla",
+    "lat": "19.0815",
+    "lon": "-98.1010"
+  },
+  {
+    "nombre": "PIZZAS REY DE REYES",
+    "desc": "Pizzas artesanales a la leña. Colonia Jardines de San José, zona Xonacatepec.",
+    "img": "/alliados/rey-de-reyes.png",
+    "url": "https://www.google.com/maps/search/Pizzas+a+la+Lena+Rey+de+Reyes+Jardines+San+Jose+Xonacatepec+Puebla",
+    "lat": "19.0843",
+    "lon": "-98.0980"
+  },
+  {
+    "nombre": "ROSTICERÍA MI PEQUEÑA LULÚ",
+    "desc": "Pollos rostizados y comida para llevar. Colonia Jardines de San José.",
+    "img": "/alliados/pequena-lulu.png",
+    "url": "https://www.google.com/maps/search/Rosticeria+Mi+Pequena+Lulu+Jardines+San+Jose+Xonacatepec+Puebla",
+    "lat": "19.0850",
+    "lon": "-98.0965"
+  },
+  {
+    "nombre": "TIANGUIS XONACATEPEC",
+    "desc": "Mercado semanal con productos frescos, ropa y abarrotes. Santa María Xonacatepec.",
+    "img": "/alliados/tianguis.png",
+    "url": "https://www.google.com/maps/search/Tianguis+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0875",
+    "lon": "-98.1042"
+  },
+  {
+    "nombre": "FARMACIA DEL AHORRO",
+    "desc": "Medicamentos, consulta médica y artículos de salud. Blvd. Xonacatepec.",
+    "img": "/alliados/farmacia-ahorro.png",
+    "url": "https://www.google.com/maps/search/Farmacia+del+Ahorro+Boulevard+Xonacatepec+Puebla",
+    "lat": "19.0895",
+    "lon": "-98.1060"
+  },
+  {
+    "nombre": "OXXO BLVD. XONACATEPEC",
+    "desc": "Tienda de conveniencia 24 horas. Blvd. Xonacatepec, Puebla.",
+    "img": "/alliados/oxxo.png",
+    "url": "https://www.google.com/maps/search/OXXO+Boulevard+Xonacatepec+Puebla",
+    "lat": "19.0902",
+    "lon": "-98.1035"
+  },
+  {
+    "nombre": "CHEDRAUI XONACATEPEC",
+    "desc": "Supermercado completo. Blvd. Xonacatepec 174, Bosques de San Sebastián.",
+    "img": "/alliados/chedraui.png",
+    "url": "https://www.google.com/maps/search/Chedraui+Boulevard+Xonacatepec+174+Bosques+San+Sebastian+Puebla",
+    "lat": "19.0910",
+    "lon": "-98.1075"
+  },
+  {
+    "nombre": "BBVA XONACATEPEC",
+    "desc": "Servicios bancarios, cajeros automáticos y atención al cliente.",
+    "img": "/alliados/bbva.png",
+    "url": "https://www.google.com/maps/search/BBVA+Boulevard+Xonacatepec+Puebla",
+    "lat": "19.0888",
+    "lon": "-98.1050"
+  },
+  {
+    "nombre": "FERRETERÍA SAN MIGUEL",
+    "desc": "Materiales de construcción, herramientas y pinturas. Col. San Miguel Xonacatepec.",
+    "img": "/alliados/ferreteria.png",
+    "url": "https://www.google.com/maps/search/Ferreteria+San+Miguel+Xonacatepec+Puebla",
+    "lat": "19.0858",
+    "lon": "-98.1080"
+  },
+  {
+    "nombre": "PAPELERÍA XONA",
+    "desc": "Útiles escolares, impresiones y copias. Servicio a estudiantes y oficinas.",
+    "img": "/alliados/papeleria.png",
+    "url": "https://www.google.com/maps/search/Papeleria+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0868",
+    "lon": "-98.1022"
+  },
+  {
+    "nombre": "ESTÉTICA XONACATEPEC",
+    "desc": "Cortes, peinados y tintes para dama y caballero. Colonia Santa María Xonacatepec.",
+    "img": "/alliados/estetica.png",
+    "url": "https://www.google.com/maps/search/Estetica+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0862",
+    "lon": "-98.1035"
+  },
+  {
+    "nombre": "TORTILLERÍA LA ESPERANZA",
+    "desc": "Tortillas frescas de maíz producción diaria. Santa María Xonacatepec.",
+    "img": "/alliados/tortilleria.png",
+    "url": "https://www.google.com/maps/search/Tortilleria+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0878",
+    "lon": "-98.1015"
+  },
+  {
+    "nombre": "ABARROTES DON CHELO",
+    "desc": "Tienda de abarrotes, refrescos y productos de primera necesidad.",
+    "img": "/alliados/abarrotes.png",
+    "url": "https://www.google.com/maps/search/Abarrotes+Santa+Maria+Xonacatepec+Puebla",
+    "lat": "19.0845",
+    "lon": "-98.1048"
+  }
 ]
