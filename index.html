@@ -51,8 +51,7 @@
   .map-section {
     position: relative;
     width: 100%;
-    height: 420px;
-    border: 1px solid rgba(0,229,204,0.15);
+    height: 520px;
   }
 
   #map {
@@ -559,9 +558,8 @@
 
 
   <!-- ══ MAP SECTION ══ -->
-  <div style="max-width:960px;width:100%;margin-bottom:0;">
 <!-- ══ MAP FULL SCREEN ══ -->
-<div class="map-section">
+<div class="map-section" style="width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;">
   <div id="map"></div>
   <div class="map-overlay"></div>
   <div class="map-corner tl"></div>
@@ -575,7 +573,6 @@
   <div class="map-coords" id="mapCoords">LAT 18.9242° N · LON 98.1277° W · ESCANEANDO...</div>
   <div class="map-signal-count" id="signalCount">// 0 SEÑALES ACTIVAS</div>
 </div>
-  </div>
 
   <div class="cta-section">
     <div class="cta-label">⌘ Protocolo de integración</div>
