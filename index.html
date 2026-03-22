@@ -580,9 +580,9 @@
   <div class="map-corner br"></div>
   <div class="map-status">
     <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#00e5cc;animation:blink 1.5s infinite;vertical-align:middle;margin-right:6px"></span>
-    HUB.SYS · EDO. PUEBLA · SEÑALES DETECTADAS
+    HUB.SYS · XONACATEPEC · SEÑALES DETECTADAS
   </div>
-  <div class="map-coords" id="mapCoords">LAT 18.9242° N · LON 98.1277° W · ESCANEANDO...</div>
+  <div class="map-coords" id="mapCoords">LAT 19.0872° N · LON 98.1039° W · ESCANEANDO...</div>
   <div class="map-signal-count" id="signalCount">// 0 SEÑALES ACTIVAS</div>
 </div>
 
@@ -599,25 +599,25 @@
 // ══════════════════════════════════════════════════════════════════
 
 // HUB coordinates — Puebla, México
-const HUB_LAT = 18.9242;
-const HUB_LON = -98.1277;
+const HUB_LAT = 19.0872;
+const HUB_LON = -98.1039;
 
 // Bounds that lock the view to Puebla state area
 const PUEBLA_BOUNDS = L.latLngBounds(
-  [18.70, -98.60],  // SW — Atlixco/Izúcar
-  [19.45, -97.70]   // NE — Tlaxcala linde
+  [19.0550, -98.1400],  // SW Xonacatepec
+  [19.1200, -98.0600]   // NE Xonacatepec
 );
 
 const map = L.map('map', {
-  center: [19.0500, -98.2000],
-  zoom: 11,
+  center: [19.0872, -98.1039],
+  zoom: 13,
   zoomControl: false,
   attributionControl: false,
   scrollWheelZoom: false,
   dragging: false,
   doubleClickZoom: false,
   touchZoom: false,
-  minZoom: 10,
+  minZoom: 12,
   maxZoom: 12,
   maxBounds: PUEBLA_BOUNDS,
   maxBoundsViscosity: 1.0,
@@ -627,7 +627,7 @@ const map = L.map('map', {
 map.whenReady(() => {
   setTimeout(() => {
     map.invalidateSize();
-    map.setView([19.0500, -98.2000], 11);
+    map.setView([19.0872, -98.1039], 13);
   }, 300);
 });
 
@@ -635,7 +635,7 @@ map.whenReady(() => {
 window.addEventListener('load', () => {
   setTimeout(() => {
     map.invalidateSize();
-    map.setView([19.0500, -98.2000], 11);
+    map.setView([19.0872, -98.1039], 13);
   }, 400);
 });
 
@@ -666,7 +666,7 @@ const hubMarker = L.marker([HUB_LAT, HUB_LON], { icon: makeHubIcon(), zIndexOffs
     <span class="pop-name">◈ HUB.SYS</span>
     <span class="pop-status">// ORIGEN DE LA RED</span><br>
     <span style="color:rgba(0,229,204,0.5)">LAT ${HUB_LAT}° N · LON ${Math.abs(HUB_LON)}° W</span><br>
-    <span style="color:rgba(0,229,204,0.5)">Puebla, México</span>
+    <span style="color:rgba(0,229,204,0.5)">Xonacatepec, Puebla</span>
   `, { maxWidth: 220 });
 
 // ── Signal marker for each ally ───────────────────────────────────
@@ -718,21 +718,21 @@ setInterval(tick, 1000); tick();
 // Default scatter positions around Puebla if aliado has no lat/lon
 // Spread across Mexico / Latin America for visual effect
 const DEFAULT_POSITIONS = [
-  [19.0550, -98.1950],   // Centro Puebla
-  [19.0630, -98.2380],   // San Andrés Cholula
-  [19.0580, -98.1620],   // San Martín Texmelucan zona
-  [19.0280, -98.2140],   // Analco / Sur
-  [19.0780, -98.1870],   // Norte Puebla
-  [19.0450, -98.2500],   // Cuautlancingo
-  [19.0190, -98.1760],   // Amozoc
-  [19.0900, -98.2100],   // Lomas de Angelópolis zona
-  [19.0350, -98.2300],   // Jardines / Poniente
-  [19.0680, -98.1650],   // Oriente Puebla
-  [19.0420, -98.1900],   // Zócalo área
-  [19.0750, -98.2400],   // Santa Clara Ocoyucan
-  [19.0260, -98.2050],   // Sur Tehuacán vía
-  [19.0830, -98.1780],   // Tecnológico / BUAP zona
-  [19.0490, -98.2200],   // Cholula pirámide zona
+  [19.0872, -98.1039],   // Presidencia Xonacatepec
+  [19.0920, -98.1080],   // Barrio Norte
+  [19.0840, -98.0990],   // Barrio Oriente
+  [19.0810, -98.1100],   // Barrio Sur
+  [19.0950, -98.1020],   // Col. San Miguel
+  [19.0880, -98.0960],   // Zona este
+  [19.0760, -98.1070],   // Zona sur
+  [19.0910, -98.1150],   // Zona oeste
+  [19.0830, -98.1000],   // Centro
+  [19.0970, -98.1060],   // Norte
+  [19.0800, -98.0980],   // Sur-oriente
+  [19.0855, -98.1120],   // Poniente
+  [19.0940, -98.0970],   // Nor-oriente
+  [19.0770, -98.1130],   // Sur-poniente
+  [19.0895, -98.1050],   // Presidencia auxiliar
 ];
 
 async function cargarAliados() {
@@ -799,7 +799,7 @@ async function cargarAliados() {
         mapEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         setTimeout(() => {
           map.invalidateSize();
-          map.flyTo(pos, 13, { duration: 1.2 });
+          map.flyTo(pos, 15, { duration: 1.2 });
         }, 500);
         setTimeout(() => marker.openPopup(), 1800);
       });
