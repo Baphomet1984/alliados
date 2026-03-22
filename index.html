@@ -528,9 +528,9 @@
   <div class="map-corner br"></div>
   <div class="map-status">
     <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#00e5cc;animation:blink 1.5s infinite;vertical-align:middle;margin-right:6px"></span>
-    HUB.SYS · PUEBLA · SEÑALES DETECTADAS
+    HUB.SYS · EDO. PUEBLA · SEÑALES DETECTADAS
   </div>
-  <div class="map-coords" id="mapCoords">LAT 19.0414° N · LON 98.2063° W · ESCANEANDO...</div>
+  <div class="map-coords" id="mapCoords">LAT 18.9242° N · LON 98.1277° W · ESCANEANDO...</div>
   <div class="map-signal-count" id="signalCount">// 0 SEÑALES ACTIVAS</div>
 </div>
 
@@ -597,18 +597,33 @@
 // ══════════════════════════════════════════════════════════════════
 
 // HUB coordinates — Puebla, México
-const HUB_LAT = 19.0414;
-const HUB_LON = -98.2063;
+const HUB_LAT = 18.9242;
+const HUB_LON = -98.1277;
+
+// Bounds that lock the view to Puebla state area
+const PUEBLA_BOUNDS = L.latLngBounds(
+  [18.95, -98.30],   // suroeste Puebla
+  [19.15, -98.05]    // noreste Puebla
+);
 
 const map = L.map('map', {
-  center: [HUB_LAT, HUB_LON],
-  zoom: 5,
+  center: [19.0414, -98.2063],
+  zoom: 13,
   zoomControl: false,
   attributionControl: false,
   scrollWheelZoom: false,
   dragging: false,
   doubleClickZoom: false,
   touchZoom: false,
+  minZoom: 12,
+  maxZoom: 16,
+  maxBounds: PUEBLA_BOUNDS,
+  maxBoundsViscosity: 1.0,
+});
+
+// Force correct view once tiles load
+map.whenReady(() => {
+  map.setView([19.0414, -98.2063], 16);
 });
 
 // Dark tile layer — CartoDB Dark Matter
@@ -690,21 +705,21 @@ setInterval(tick, 1000); tick();
 // Default scatter positions around Puebla if aliado has no lat/lon
 // Spread across Mexico / Latin America for visual effect
 const DEFAULT_POSITIONS = [
-  [19.4326, -99.1332],   // CDMX
-  [20.6597, -103.3496],  // Guadalajara
-  [25.6866, -100.3161],  // Monterrey
-  [29.0729, -110.9559],  // Hermosillo
-  [21.1619, -86.8515],   // Cancún
-  [20.9674, -89.6237],   // Mérida
-  [22.1565, -100.9855],  // San Luis Potosí
-  [17.0732, -96.7266],   // Oaxaca
-  [16.7520, -93.1152],   // Tuxtla
-  [23.7369, -99.1411],   // Ciudad Victoria
-  [4.7110,  -74.0721],   // Bogotá
-  [-12.0464, -77.0428],  // Lima
-  [-34.6037, -58.3816],  // Buenos Aires
-  [-23.5505, -46.6333],  // São Paulo
-  [10.4806, -66.9036],   // Caracas
+  [19.0414, -98.2063],   // Puebla ciudad
+  [18.8544, -97.0977],   // Tehuacán
+  [20.0740, -98.3600],   // Zacatlán
+  [19.9553, -97.9653],   // Chignahuapan
+  [18.7960, -98.9545],   // Izúcar de Matamoros
+  [19.6891, -98.1805],   // Tepeaca
+  [19.3145, -98.4330],   // Cholula
+  [20.1322, -97.6573],   // Huauchinango
+  [18.6025, -97.6600],   // Teotitlán
+  [19.4762, -97.9765],   // Tlaxcala (linde)
+  [19.1631, -98.4553],   // Atlixco
+  [18.9670, -97.4010],   // Tehuacán zona
+  [19.8520, -97.3820],   // Tulancingo linde
+  [19.1000, -97.7500],   // Mixteca poblana
+  [20.0200, -98.0500],   // Sierra Norte
 ];
 
 async function cargarAliados() {
@@ -767,7 +782,7 @@ async function cargarAliados() {
 
       // Click card → fly map to that marker and open popup
       card.addEventListener('click', () => {
-        map.flyTo(pos, 7, { duration: 1.2 });
+        map.flyTo(pos, 10, { duration: 1.2 });
         setTimeout(() => marker.openPopup(), 1300);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
