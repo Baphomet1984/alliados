@@ -51,8 +51,8 @@
   .map-section {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 500px;
+    height: 420px;
+    border: 1px solid rgba(0,229,204,0.15);
   }
 
   #map {
@@ -518,22 +518,6 @@
 </head>
 <body>
 
-<!-- ══ MAP FULL SCREEN ══ -->
-<div class="map-section">
-  <div id="map"></div>
-  <div class="map-overlay"></div>
-  <div class="map-corner tl"></div>
-  <div class="map-corner tr"></div>
-  <div class="map-corner bl"></div>
-  <div class="map-corner br"></div>
-  <div class="map-status">
-    <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#00e5cc;animation:blink 1.5s infinite;vertical-align:middle;margin-right:6px"></span>
-    HUB.SYS · EDO. PUEBLA · SEÑALES DETECTADAS
-  </div>
-  <div class="map-coords" id="mapCoords">LAT 18.9242° N · LON 98.1277° W · ESCANEANDO...</div>
-  <div class="map-signal-count" id="signalCount">// 0 SEÑALES ACTIVAS</div>
-</div>
-
 <!-- ══ CARDS SECTION ══ -->
 <div class="stage">
 
@@ -571,6 +555,27 @@
   </div>
 
   <div class="nodes-grid" id="alliadosContainer"></div>
+
+
+
+  <!-- ══ MAP SECTION ══ -->
+  <div style="max-width:960px;width:100%;margin-bottom:0;">
+<!-- ══ MAP FULL SCREEN ══ -->
+<div class="map-section">
+  <div id="map"></div>
+  <div class="map-overlay"></div>
+  <div class="map-corner tl"></div>
+  <div class="map-corner tr"></div>
+  <div class="map-corner bl"></div>
+  <div class="map-corner br"></div>
+  <div class="map-status">
+    <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#00e5cc;animation:blink 1.5s infinite;vertical-align:middle;margin-right:6px"></span>
+    HUB.SYS · EDO. PUEBLA · SEÑALES DETECTADAS
+  </div>
+  <div class="map-coords" id="mapCoords">LAT 18.9242° N · LON 98.1277° W · ESCANEANDO...</div>
+  <div class="map-signal-count" id="signalCount">// 0 SEÑALES ACTIVAS</div>
+</div>
+  </div>
 
   <div class="cta-section">
     <div class="cta-label">⌘ Protocolo de integración</div>
