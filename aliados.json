@@ -5,8 +5,8 @@
     "img": "/alliados/similares-bosques.png",
     "url": "https://www.google.com/maps/search/Farmacias+Similares+Blvd+Puebla+19+Bosques+San+Sebastian+Puebla",
     "telefono": "800 911 6666",
-    "lat": "19.0948",
-    "lon": "-98.1082"
+    "lat": "19.062454",
+    "lon": "-98.133413"
   },
   {
     "nombre": "FARMACIAS SIMILARES (CALLE 1-B 76)",
@@ -14,8 +14,8 @@
     "img": "/alliados/similares2.png",
     "url": "https://www.google.com/maps/search/Farmacias+Similares+Calle+1B+76+Bosques+San+Sebastian+Puebla",
     "telefono": "(222) 218 3107",
-    "lat": "19.0952",
-    "lon": "-98.1090"
+    "lat": "19.061000",
+    "lon": "-98.134920"
   },
   {
     "nombre": "FARMACIAS SIMILARES (BLVD. PUEBLA 18-A)",
@@ -23,8 +23,8 @@
     "img": "/alliados/similares3.png",
     "url": "https://www.google.com/maps/search/Farmacias+Similares+Blvd+Puebla+18+Bosques+San+Sebastian+Puebla",
     "telefono": "(222) 218 4647",
-    "lat": "19.0945",
-    "lon": "-98.1078"
+    "lat": "19.063006",
+    "lon": "-98.136250"
   },
   {
     "nombre": "FARMACIAS SIMILARES AMALUCAN",
@@ -32,8 +32,8 @@
     "img": "/alliados/similares-amalucan.png",
     "url": "https://www.google.com/maps/search/Farmacias+Similares+Av+Xonacatepec+115+Amalucan+Puebla",
     "telefono": "(222) 287 8146",
-    "lat": "19.0965",
-    "lon": "-98.1105"
+    "lat": "19.080343",
+    "lon": "-98.109542"
   },
   {
     "nombre": "FARMACIA GUADALAJARA XONACATEPEC",
@@ -41,8 +41,8 @@
     "img": "/alliados/farmacia-guadalajara.png",
     "url": "https://www.google.com/maps/search/Farmacia+Guadalajara+Av+Xonacatepec+170+Bosques+San+Sebastian+Puebla",
     "telefono": "800 333 3000",
-    "lat": "19.0932",
-    "lon": "-98.1060"
+    "lat": "19.058273",
+    "lon": "-98.130953"
   },
   {
     "nombre": "FARMACIA DR. AHORRO PLAZAS AMALUCAN",
@@ -50,8 +50,8 @@
     "img": "/alliados/dr-ahorro.png",
     "url": "https://www.google.com/maps/search/Farmacia+Dr+Ahorro+Av+Las+Torres+1402+Amalucan+Puebla",
     "telefono": "(222) 367 0308",
-    "lat": "19.0978",
-    "lon": "-98.1125"
+    "lat": "19.052478",
+    "lon": "-98.167406"
   },
   {
     "nombre": "FARMACIA DULCE MARÍA",
@@ -59,8 +59,8 @@
     "img": "/alliados/farmacia-dulce.png",
     "url": "https://www.google.com/maps/search/Farmacia+Dulce+Maria+Calle+4B+4+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0940",
-    "lon": "-98.1095"
+    "lat": "19.059402",
+    "lon": "-98.134542"
   },
   {
     "nombre": "FARMACIA REAL DE BOSQUES",
@@ -68,8 +68,8 @@
     "img": "/alliados/farmacia-real.png",
     "url": "https://www.google.com/maps/search/Farmacia+Real+de+Bosques+Blvd+Puebla+168+Puebla",
     "telefono": "",
-    "lat": "19.0958",
-    "lon": "-98.1100"
+    "lat": "19.063011",
+    "lon": "-98.136293"
   },
   {
     "nombre": "FARMACIA SAN ANTONI",
@@ -77,8 +77,8 @@
     "img": "/alliados/farmacia-san-antoni.png",
     "url": "https://www.google.com/maps/search/Farmacia+San+Antoni+Calle+8B+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0955",
-    "lon": "-98.1088"
+    "lat": "19.051323",
+    "lon": "-98.133292"
   },
   {
     "nombre": "FARMACIA EL BOSQUE",
@@ -86,8 +86,8 @@
     "img": "/alliados/farmacia-bosque.png",
     "url": "https://www.google.com/maps/search/Farmacia+El+Bosque+Calle+5B+19+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0950",
-    "lon": "-98.1085"
+    "lat": "19.059681",
+    "lon": "-98.133152"
   },
   {
     "nombre": "FARMACIA NUESTRA SRA. DE JUQUILA",
@@ -95,8 +95,8 @@
     "img": "/alliados/farmacia-juquila.png",
     "url": "https://www.google.com/maps/search/Farmacia+Nuestra+Señora+Juquila+Bosques+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0960",
-    "lon": "-98.1098"
+    "lat": "19.064598",
+    "lon": "-98.132837"
   },
   {
     "nombre": "FARMACIA EL VALLE",
@@ -104,8 +104,8 @@
     "img": "/alliados/farmacia-valle.png",
     "url": "https://www.google.com/maps/search/Farmacia+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1015",
-    "lon": "-98.1165"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "MANDADITOS XONACATEPEC",
@@ -113,8 +113,8 @@
     "img": "/alliados/1771832573512.png",
     "url": "https://www.facebook.com/share/182Fm2eKF5/",
     "telefono": "",
-    "lat": "19.0872",
-    "lon": "-98.1039"
+    "lat": "19.086669",
+    "lon": "-98.104568"
   },
   {
     "nombre": "CENTRAL DE TAXIS PARQUE COLÓN",
@@ -122,8 +122,8 @@
     "img": "/alliados/taxi-parque-colon.png",
     "url": "https://www.google.com/maps/search/Central+Taxis+Parque+Colon+Eucalipto+Xonacatepec+Puebla",
     "telefono": "(222) 445 8508",
-    "lat": "19.0880",
-    "lon": "-98.1042"
+    "lat": "19.082156",
+    "lon": "-98.107046"
   },
   {
     "nombre": "TAXISTAS PARQUE COLÓN (AV. CRISTÓBAL COLÓN)",
@@ -140,8 +140,8 @@
     "img": "/alliados/taxi-villas.png",
     "url": "https://www.google.com/maps/search/Base+Taxis+Villas+Guadalupe+Xonacatepec+Puebla",
     "telefono": "(222) 845 1346",
-    "lat": "19.0855",
-    "lon": "-98.1015"
+    "lat": "19.089513",
+    "lon": "-98.178474"
   },
   {
     "nombre": "TAXI BOSQUES (BLVD. MONTERREY 33)",
@@ -149,8 +149,8 @@
     "img": "/alliados/taxi-bosques.png",
     "url": "https://www.google.com/maps/search/Taxi+Blvd+Monterrey+33+Bosques+San+Sebastian+Puebla",
     "telefono": "(222) 218 2000",
-    "lat": "19.0910",
-    "lon": "-98.1068"
+    "lat": "19.058774",
+    "lon": "-98.135035"
   },
   {
     "nombre": "CENTRAL DE TAXIS BASE LA CRUZ",
@@ -158,8 +158,8 @@
     "img": "/alliados/taxi-la-cruz.png",
     "url": "https://www.facebook.com/p/Central-de-Taxis-Xonacatepec-100063965493377/",
     "telefono": "",
-    "lat": "19.0868",
-    "lon": "-98.1030"
+    "lat": "19.076412",
+    "lon": "-98.103651"
   },
   {
     "nombre": "TAXI SERVICIO INDEPENDENCIA",
@@ -167,8 +167,8 @@
     "img": "/alliados/taxi-independencia.png",
     "url": "https://www.google.com/maps/search/Taxi+Calle+Independencia+17+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0862",
-    "lon": "-98.1048"
+    "lat": "19.041990",
+    "lon": "-98.140883"
   },
   {
     "nombre": "TAXIS AMALUCAN",
@@ -176,8 +176,8 @@
     "img": "/alliados/taxi-amalucan.png",
     "url": "https://www.google.com/maps/search/Taxis+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0988",
-    "lon": "-98.1138"
+    "lat": "19.069433",
+    "lon": "-98.127573"
   },
   {
     "nombre": "TAXIS RIVERA ANAYA",
@@ -185,8 +185,8 @@
     "img": "/alliados/taxi-rivera.png",
     "url": "https://www.google.com/maps/search/Taxis+Av+Manuel+Rivera+Anaya+Puebla",
     "telefono": "",
-    "lat": "19.1002",
-    "lon": "-98.1150"
+    "lat": "19.054536",
+    "lon": "-98.148916"
   },
   {
     "nombre": "TAXIS EL VALLE",
@@ -194,8 +194,8 @@
     "img": "/alliados/taxi-valle.png",
     "url": "https://www.google.com/maps/search/Taxis+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1010",
-    "lon": "-98.1162"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "CLÍNICA 55 AMALUCAN (IMSS)",
@@ -203,8 +203,8 @@
     "img": "/alliados/imss-55.png",
     "url": "https://www.google.com/maps/search/IMSS+Clinica+55+Amalucan+Av+Torres+Puebla",
     "telefono": "800 623 2323",
-    "lat": "19.0985",
-    "lon": "-98.1130"
+    "lat": "19.050253",
+    "lon": "-98.147457"
   },
   {
     "nombre": "UNIDAD HOSPITALARIA AMALUCAN",
@@ -212,8 +212,8 @@
     "img": "/alliados/hospital-amalucan.png",
     "url": "https://www.google.com/maps/search/Unidad+Hospitalaria+Amalucan+Av+Xonacatepec+1895+Puebla",
     "telefono": "(222) 211 5200",
-    "lat": "19.0972",
-    "lon": "-98.1115"
+    "lat": "19.052437",
+    "lon": "-98.147983"
   },
   {
     "nombre": "CONSULTORIO MÉDICO FUNDACIÓN BEST",
@@ -221,8 +221,8 @@
     "img": "/alliados/consultorio-best.png",
     "url": "https://www.google.com/maps/search/Consultorio+Medico+Fundacion+Best+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0968",
-    "lon": "-98.1110"
+    "lat": "19.016509",
+    "lon": "-98.183765"
   },
   {
     "nombre": "CONSULTORIO DENTAL AMALUCAN",
@@ -230,8 +230,8 @@
     "img": "/alliados/dental-amalucan.png",
     "url": "https://www.google.com/maps/search/Consultorio+Dental+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0970",
-    "lon": "-98.1108"
+    "lat": "19.053197",
+    "lon": "-98.146870"
   },
   {
     "nombre": "GINECÓLOGO ZONA AMALUCAN",
@@ -239,8 +239,8 @@
     "img": "/alliados/ginecologo.png",
     "url": "https://www.google.com/maps/search/Ginecologo+Av+Xonacatepec+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0975",
-    "lon": "-98.1112"
+    "lat": "19.069346",
+    "lon": "-98.127307"
   },
   {
     "nombre": "CONSULTORIO PEDIATRA AMALUCAN",
@@ -248,8 +248,8 @@
     "img": "/alliados/pediatra.png",
     "url": "https://www.google.com/maps/search/Consultorio+Pediatra+Amalucan+Rivera+Anaya+Puebla",
     "telefono": "",
-    "lat": "19.0963",
-    "lon": "-98.1102"
+    "lat": "19.053197",
+    "lon": "-98.146870"
   },
   {
     "nombre": "LABORATORIO CLÍNICO BOSQUES",
@@ -257,8 +257,8 @@
     "img": "/alliados/laboratorio.png",
     "url": "https://www.google.com/maps/search/Laboratorio+Clinico+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0942",
-    "lon": "-98.1075"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "CONSULTORIO MÉDICO EL VALLE",
@@ -266,8 +266,8 @@
     "img": "/alliados/consultorio-valle.png",
     "url": "https://www.google.com/maps/search/Consultorio+Medico+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1012",
-    "lon": "-98.1160"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "CONSULTORIO DENTAL XONACATEPEC",
@@ -275,8 +275,8 @@
     "img": "/alliados/dental-xona.png",
     "url": "https://www.google.com/maps/search/Dentista+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0874",
-    "lon": "-98.1040"
+    "lat": "19.085998",
+    "lon": "-98.104994"
   },
   {
     "nombre": "MECÁNICA CENTER",
@@ -284,8 +284,8 @@
     "img": "/alliados/mecanica-center.png",
     "url": "https://www.mecanicacenter.com/",
     "telefono": "(222) 182 1613",
-    "lat": "19.0935",
-    "lon": "-98.1055"
+    "lat": "19.065759",
+    "lon": "-98.205387"
   },
   {
     "nombre": "TALLER MECÁNICO AV. XONACATEPEC 1841",
@@ -293,8 +293,8 @@
     "img": "/alliados/taller-xona.png",
     "url": "https://www.google.com/maps/search/Taller+Mecanico+Av+Xonacatepec+1841+Rivera+Anaya+Puebla",
     "telefono": "",
-    "lat": "19.0982",
-    "lon": "-98.1118"
+    "lat": "19.050817",
+    "lon": "-98.151278"
   },
   {
     "nombre": "TALLER ELÉCTRICO AUTOMOTRIZ BOSQUES",
@@ -302,8 +302,8 @@
     "img": "/alliados/taller-electrico.png",
     "url": "https://www.google.com/maps/search/Taller+Electrico+Automotriz+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0942",
-    "lon": "-98.1070"
+    "lat": "19.056779",
+    "lon": "-98.207024"
   },
   {
     "nombre": "HOJALATERÍA Y PINTURA BOSQUES",
@@ -311,8 +311,8 @@
     "img": "/alliados/hojalateria.png",
     "url": "https://www.google.com/maps/search/Hojalateria+Pintura+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0938",
-    "lon": "-98.1065"
+    "lat": "19.060456",
+    "lon": "-98.135221"
   },
   {
     "nombre": "AUTOLAVADO BOSQUES",
@@ -320,8 +320,8 @@
     "img": "/alliados/autolavado.png",
     "url": "https://www.google.com/maps/search/Autolavado+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0928",
-    "lon": "-98.1058"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "REFACCIONARIA BOSQUES",
@@ -329,8 +329,8 @@
     "img": "/alliados/refaccionaria.png",
     "url": "https://www.google.com/maps/search/Refaccionaria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0930",
-    "lon": "-98.1062"
+    "lat": "19.056208",
+    "lon": "-98.134125"
   },
   {
     "nombre": "LLANTERA XONACATEPEC",
@@ -338,8 +338,8 @@
     "img": "/alliados/llantera.png",
     "url": "https://www.google.com/maps/search/Llantera+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0878",
-    "lon": "-98.1028"
+    "lat": "19.069027",
+    "lon": "-98.116448"
   },
   {
     "nombre": "TALLER MECÁNICO EL VALLE",
@@ -347,8 +347,8 @@
     "img": "/alliados/taller-valle.png",
     "url": "https://www.google.com/maps/search/Taller+Mecanico+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1008",
-    "lon": "-98.1158"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "TALLER DE MOTOS AMALUCAN",
@@ -356,8 +356,8 @@
     "img": "/alliados/taller-motos.png",
     "url": "https://www.google.com/maps/search/Taller+Motocicletas+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0982",
-    "lon": "-98.1120"
+    "lat": "19.053197",
+    "lon": "-98.146870"
   },
   {
     "nombre": "BBVA BOSQUES DE SAN SEBASTIÁN",
@@ -365,8 +365,8 @@
     "img": "/alliados/bbva.png",
     "url": "https://www.google.com/maps/search/BBVA+Bosques+San+Sebastian+Blvd+Xonacatepec+Puebla",
     "telefono": "800 226 2663",
-    "lat": "19.0920",
-    "lon": "-98.1058"
+    "lat": "19.059976",
+    "lon": "-98.129445"
   },
   {
     "nombre": "BANAMEX AMALUCAN",
@@ -374,8 +374,8 @@
     "img": "/alliados/banamex.png",
     "url": "https://www.google.com/maps/search/Banamex+Amalucan+Puebla",
     "telefono": "800 226 2639",
-    "lat": "19.0975",
-    "lon": "-98.1120"
+    "lat": "19.041742",
+    "lon": "-98.146008"
   },
   {
     "nombre": "BANCO AZTECA BOSQUES",
@@ -383,8 +383,8 @@
     "img": "/alliados/banco-azteca.png",
     "url": "https://www.google.com/maps/search/Banco+Azteca+Bosques+San+Sebastian+Puebla",
     "telefono": "800 900 9000",
-    "lat": "19.0935",
-    "lon": "-98.1072"
+    "lat": "19.052313",
+    "lon": "-98.148882"
   },
   {
     "nombre": "CAJA POPULAR MEXICANA XONACATEPEC",
@@ -392,8 +392,8 @@
     "img": "/alliados/caja-popular.png",
     "url": "https://www.google.com/maps/search/Caja+Popular+Mexicana+Xonacatepec+Puebla",
     "telefono": "(222) 213 0000",
-    "lat": "19.0885",
-    "lon": "-98.1045"
+    "lat": "19.061884",
+    "lon": "-98.216989"
   },
   {
     "nombre": "HSBC BLVD. XONACATEPEC",
@@ -401,8 +401,8 @@
     "img": "/alliados/hsbc.png",
     "url": "https://www.google.com/maps/search/HSBC+Boulevard+Xonacatepec+Puebla",
     "telefono": "800 890 0000",
-    "lat": "19.0912",
-    "lon": "-98.1052"
+    "lat": "19.059976",
+    "lon": "-98.129445"
   },
   {
     "nombre": "SANTANDER AMALUCAN",
@@ -410,8 +410,8 @@
     "img": "/alliados/santander.png",
     "url": "https://www.google.com/maps/search/Santander+Amalucan+Puebla",
     "telefono": "800 501 0000",
-    "lat": "19.0980",
-    "lon": "-98.1128"
+    "lat": "19.069433",
+    "lon": "-98.127573"
   },
   {
     "nombre": "SCOTIABANK XONACATEPEC",
@@ -419,8 +419,8 @@
     "img": "/alliados/scotiabank.png",
     "url": "https://www.google.com/maps/search/Scotiabank+Xonacatepec+Puebla",
     "telefono": "800 744 4000",
-    "lat": "19.0900",
-    "lon": "-98.1048"
+    "lat": "19.069027",
+    "lon": "-98.116448"
   },
   {
     "nombre": "CHEDRAUI XONACATEPEC",
@@ -428,8 +428,8 @@
     "img": "/alliados/chedraui.png",
     "url": "https://www.google.com/maps/search/Chedraui+Boulevard+Xonacatepec+174+Puebla",
     "telefono": "(222) 218 5000",
-    "lat": "19.0910",
-    "lon": "-98.1075"
+    "lat": "19.058675",
+    "lon": "-98.130457"
   },
   {
     "nombre": "OXXO BLVD. XONACATEPEC",
@@ -437,8 +437,8 @@
     "img": "/alliados/oxxo-blvd.png",
     "url": "https://www.google.com/maps/search/OXXO+Boulevard+Xonacatepec+Puebla",
     "telefono": "800 696 9669",
-    "lat": "19.0902",
-    "lon": "-98.1035"
+    "lat": "19.059976",
+    "lon": "-98.129445"
   },
   {
     "nombre": "OXXO AMALUCAN",
@@ -446,8 +446,8 @@
     "img": "/alliados/oxxo-amalucan.png",
     "url": "https://www.google.com/maps/search/OXXO+Amalucan+Puebla",
     "telefono": "800 696 9669",
-    "lat": "19.0988",
-    "lon": "-98.1135"
+    "lat": "19.052310",
+    "lon": "-98.146836"
   },
   {
     "nombre": "OXXO RIVERA ANAYA",
@@ -455,8 +455,8 @@
     "img": "/alliados/oxxo-rivera.png",
     "url": "https://www.google.com/maps/search/OXXO+Av+Manuel+Rivera+Anaya+Puebla",
     "telefono": "800 696 9669",
-    "lat": "19.1000",
-    "lon": "-98.1148"
+    "lat": "19.054536",
+    "lon": "-98.148916"
   },
   {
     "nombre": "7-ELEVEN BOSQUES",
@@ -464,8 +464,8 @@
     "img": "/alliados/seven.png",
     "url": "https://www.google.com/maps/search/7+Eleven+Bosques+San+Sebastian+Puebla",
     "telefono": "800 711 1711",
-    "lat": "19.0945",
-    "lon": "-98.1078"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "BODEGA AURRERA XONACATEPEC",
@@ -473,8 +473,8 @@
     "img": "/alliados/bodega-aurrera.png",
     "url": "https://www.google.com/maps/search/Bodega+Aurrera+Xonacatepec+Puebla",
     "telefono": "(222) 211 0000",
-    "lat": "19.0895",
-    "lon": "-98.1065"
+    "lat": "19.056107",
+    "lon": "-98.139340"
   },
   {
     "nombre": "WALMART BOSQUES",
@@ -482,8 +482,8 @@
     "img": "/alliados/walmart.png",
     "url": "https://www.google.com/maps/search/Walmart+Bosques+San+Sebastian+Puebla",
     "telefono": "(222) 217 0000",
-    "lat": "19.0925",
-    "lon": "-98.1060"
+    "lat": "19.059976",
+    "lon": "-98.129445"
   },
   {
     "nombre": "ABARROTES DON CHELO",
@@ -491,8 +491,8 @@
     "img": "/alliados/abarrotes.png",
     "url": "https://www.google.com/maps/search/Abarrotes+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0845",
-    "lon": "-98.1048"
+    "lat": "19.085655",
+    "lon": "-98.105338"
   },
   {
     "nombre": "MISCELÁNEA EL VALLE",
@@ -500,8 +500,8 @@
     "img": "/alliados/miscelanea-valle.png",
     "url": "https://www.google.com/maps/search/Miscelanea+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1010",
-    "lon": "-98.1160"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "TIANGUIS XONACATEPEC",
@@ -509,8 +509,8 @@
     "img": "/alliados/tianguis.png",
     "url": "https://www.google.com/maps/search/Tianguis+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0875",
-    "lon": "-98.1042"
+    "lat": "19.069027",
+    "lon": "-98.116448"
   },
   {
     "nombre": "PAPELERÍA Y COPIAS BOSQUES",
@@ -518,8 +518,8 @@
     "img": "/alliados/papeleria-bosques.png",
     "url": "https://www.google.com/maps/search/Papeleria+Copias+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0940",
-    "lon": "-98.1075"
+    "lat": "19.033380",
+    "lon": "-98.143965"
   },
   {
     "nombre": "PAPELERÍA XONA",
@@ -527,8 +527,8 @@
     "img": "/alliados/papeleria-xona.png",
     "url": "https://www.google.com/maps/search/Papeleria+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0868",
-    "lon": "-98.1022"
+    "lat": "19.078748",
+    "lon": "-98.106602"
   },
   {
     "nombre": "COPIAS E IMPRESIONES AMALUCAN",
@@ -536,8 +536,8 @@
     "img": "/alliados/copias-amalucan.png",
     "url": "https://www.google.com/maps/search/Copias+Impresiones+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0990",
-    "lon": "-98.1140"
+    "lat": "19.053197",
+    "lon": "-98.146870"
   },
   {
     "nombre": "PAPELERÍA RIVERA ANAYA",
@@ -545,8 +545,8 @@
     "img": "/alliados/papeleria-rivera.png",
     "url": "https://www.google.com/maps/search/Papeleria+Av+Manuel+Rivera+Anaya+Puebla",
     "telefono": "",
-    "lat": "19.1005",
-    "lon": "-98.1155"
+    "lat": "19.047343",
+    "lon": "-98.185814"
   },
   {
     "nombre": "PAPELERÍA EL VALLE",
@@ -554,8 +554,8 @@
     "img": "/alliados/papeleria-valle.png",
     "url": "https://www.google.com/maps/search/Papeleria+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1012",
-    "lon": "-98.1162"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "BENY PIZZAS",
@@ -563,8 +563,8 @@
     "img": "/alliados/beny-pizzas.png",
     "url": "https://www.google.com/maps/search/Beny+Pizzas+Av+Cristobal+Colon+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0891",
-    "lon": "-98.1055"
+    "lat": "19.081482",
+    "lon": "-98.108460"
   },
   {
     "nombre": "ROSTICERÍA BERTHA",
@@ -572,8 +572,8 @@
     "img": "/alliados/rosticeria-bertha.png",
     "url": "https://www.google.com/maps/search/Rosticeria+Bertha+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0880",
-    "lon": "-98.1025"
+    "lat": "19.080377",
+    "lon": "-98.109616"
   },
   {
     "nombre": "ROSTICERÍA ARIANA",
@@ -581,8 +581,8 @@
     "img": "/alliados/rosticeria-ariana.png",
     "url": "https://www.google.com/maps/search/Rosticeria+Ariana+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0865",
-    "lon": "-98.1048"
+    "lat": "19.085655",
+    "lon": "-98.105338"
   },
   {
     "nombre": "TAQUERÍA LOS PINOS",
@@ -590,8 +590,8 @@
     "img": "/alliados/taqueria-pinos.png",
     "url": "https://www.google.com/maps/search/Taqueria+Los+Pinos+Av+Xonacatepec+San+Miguel+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0855",
-    "lon": "-98.1070"
+    "lat": "19.085655",
+    "lon": "-98.105338"
   },
   {
     "nombre": "POLLOS GUERRERO",
@@ -599,8 +599,8 @@
     "img": "/alliados/pollos-guerrero.png",
     "url": "https://www.google.com/maps/search/Pollos+Guerrero+Guadalupe+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0820",
-    "lon": "-98.0998"
+    "lat": "19.052261",
+    "lon": "-98.147484"
   },
   {
     "nombre": "PIZZAS REY DE REYES",
@@ -608,8 +608,8 @@
     "img": "/alliados/rey-de-reyes.png",
     "url": "https://www.google.com/maps/search/Pizzas+Rey+de+Reyes+Jardines+San+Jose+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0843",
-    "lon": "-98.0980"
+    "lat": "19.075928",
+    "lon": "-98.118837"
   },
   {
     "nombre": "ROSTICERÍA BARRIO DEL CRISTO",
@@ -617,8 +617,8 @@
     "img": "/alliados/rosticeria-cristo.png",
     "url": "https://www.google.com/maps/search/Rosticeria+Barrio+del+Cristo+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0834",
-    "lon": "-98.1032"
+    "lat": "19.085280",
+    "lon": "-98.101561"
   },
   {
     "nombre": "ROSTICERÍA EL COMPADRE",
@@ -626,8 +626,8 @@
     "img": "/alliados/el-compadre.png",
     "url": "https://www.google.com/maps/search/Rosticeria+El+Compadre+Guadalupe+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0815",
-    "lon": "-98.1010"
+    "lat": "19.029022",
+    "lon": "-98.142005"
   },
   {
     "nombre": "TAQUERÍA RIVERA ANAYA",
@@ -635,8 +635,8 @@
     "img": "/alliados/taqueria-rivera.png",
     "url": "https://www.google.com/maps/search/Taqueria+Av+Manuel+Rivera+Anaya+Puebla",
     "telefono": "",
-    "lat": "19.0998",
-    "lon": "-98.1142"
+    "lat": "19.054536",
+    "lon": "-98.148916"
   },
   {
     "nombre": "TORTAS Y JUGOS BOSQUES",
@@ -644,8 +644,8 @@
     "img": "/alliados/tortas-bosques.png",
     "url": "https://www.google.com/maps/search/Tortas+Jugos+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0944",
-    "lon": "-98.1076"
+    "lat": "19.060456",
+    "lon": "-98.135221"
   },
   {
     "nombre": "COCINA ECONÓMICA AMALUCAN",
@@ -653,8 +653,8 @@
     "img": "/alliados/cocina-amalucan.png",
     "url": "https://www.google.com/maps/search/Cocina+Economica+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0985",
-    "lon": "-98.1130"
+    "lat": "19.023518",
+    "lon": "-98.210238"
   },
   {
     "nombre": "TORTILLERÍA LA ESPERANZA",
@@ -662,8 +662,8 @@
     "img": "/alliados/tortilleria.png",
     "url": "https://www.google.com/maps/search/Tortilleria+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0878",
-    "lon": "-98.1015"
+    "lat": "19.102764",
+    "lon": "-98.213298"
   },
   {
     "nombre": "PANADERÍA LA ESPERANZA",
@@ -671,8 +671,8 @@
     "img": "/alliados/panaderia.png",
     "url": "https://www.google.com/maps/search/Panaderia+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0866",
-    "lon": "-98.1028"
+    "lat": "19.085655",
+    "lon": "-98.105338"
   },
   {
     "nombre": "CARNICERÍA XONACATEPEC",
@@ -680,8 +680,8 @@
     "img": "/alliados/carniceria.png",
     "url": "https://www.google.com/maps/search/Carniceria+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0870",
-    "lon": "-98.1032"
+    "lat": "19.052657",
+    "lon": "-98.146669"
   },
   {
     "nombre": "POLLERÍA BOSQUES",
@@ -689,8 +689,8 @@
     "img": "/alliados/polleria.png",
     "url": "https://www.google.com/maps/search/Polleria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0948",
-    "lon": "-98.1082"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "FERRETERÍA SAN MIGUEL",
@@ -698,8 +698,8 @@
     "img": "/alliados/ferreteria-san-miguel.png",
     "url": "https://www.google.com/maps/search/Ferreteria+San+Miguel+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0858",
-    "lon": "-98.1080"
+    "lat": "19.079494",
+    "lon": "-98.110298"
   },
   {
     "nombre": "FERRETERÍA BOSQUES",
@@ -707,8 +707,8 @@
     "img": "/alliados/ferreteria-bosques.png",
     "url": "https://www.google.com/maps/search/Ferreteria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0948",
-    "lon": "-98.1082"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "FERRETERÍA AMALUCAN",
@@ -716,8 +716,8 @@
     "img": "/alliados/ferreteria-amalucan.png",
     "url": "https://www.google.com/maps/search/Ferreteria+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0980",
-    "lon": "-98.1128"
+    "lat": "19.069433",
+    "lon": "-98.127573"
   },
   {
     "nombre": "ESTÉTICA XONACATEPEC",
@@ -725,8 +725,8 @@
     "img": "/alliados/estetica-xona.png",
     "url": "https://www.google.com/maps/search/Estetica+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0862",
-    "lon": "-98.1035"
+    "lat": "19.085998",
+    "lon": "-98.104994"
   },
   {
     "nombre": "ESTÉTICA BOSQUES",
@@ -734,8 +734,8 @@
     "img": "/alliados/estetica-bosques.png",
     "url": "https://www.google.com/maps/search/Estetica+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0942",
-    "lon": "-98.1072"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "VETERINARIA BOSQUES",
@@ -743,8 +743,8 @@
     "img": "/alliados/veterinaria.png",
     "url": "https://www.google.com/maps/search/Veterinaria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0938",
-    "lon": "-98.1070"
+    "lat": "19.064253",
+    "lon": "-98.123235"
   },
   {
     "nombre": "ÓPTICA XONACATEPEC",
@@ -752,8 +752,8 @@
     "img": "/alliados/optica.png",
     "url": "https://www.google.com/maps/search/Optica+Xonacatepec+Bosques+Puebla",
     "telefono": "",
-    "lat": "19.0905",
-    "lon": "-98.1048"
+    "lat": "19.067045",
+    "lon": "-98.149687"
   },
   {
     "nombre": "TINTORERÍA BOSQUES",
@@ -761,8 +761,8 @@
     "img": "/alliados/tintoreria.png",
     "url": "https://www.google.com/maps/search/Tintoreria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0932",
-    "lon": "-98.1065"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "ZAPATERÍA BOSQUES",
@@ -770,8 +770,8 @@
     "img": "/alliados/zapateria.png",
     "url": "https://www.google.com/maps/search/Zapateria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0936",
-    "lon": "-98.1068"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "PLOMERO XONACATEPEC",
@@ -779,8 +779,8 @@
     "img": "/alliados/plomero.png",
     "url": "https://www.google.com/maps/search/Plomero+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0875",
-    "lon": "-98.1038"
+    "lat": "19.069027",
+    "lon": "-98.116448"
   },
   {
     "nombre": "ELECTRICISTA BOSQUES",
@@ -788,8 +788,8 @@
     "img": "/alliados/electricista.png",
     "url": "https://www.google.com/maps/search/Electricista+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0944",
-    "lon": "-98.1076"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "CERRAJERÍA XONACATEPEC",
@@ -797,8 +797,8 @@
     "img": "/alliados/cerrajeria.png",
     "url": "https://www.google.com/maps/search/Cerrajeria+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0868",
-    "lon": "-98.1040"
+    "lat": "19.082336",
+    "lon": "-98.107894"
   },
   {
     "nombre": "TALLER DE BICICLETAS AMALUCAN",
@@ -806,8 +806,8 @@
     "img": "/alliados/taller-bicicletas.png",
     "url": "https://www.google.com/maps/search/Taller+Bicicletas+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0985",
-    "lon": "-98.1132"
+    "lat": "19.053197",
+    "lon": "-98.146870"
   },
   {
     "nombre": "CENTRO DE COPIADO XONACATEPEC",
@@ -815,8 +815,8 @@
     "img": "/alliados/copiado.png",
     "url": "https://www.google.com/maps/search/Centro+Copiado+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0870",
-    "lon": "-98.1035"
+    "lat": "19.048181",
+    "lon": "-98.149041"
   },
   {
     "nombre": "INTERNET Y COMPUTACIÓN BOSQUES",
@@ -824,8 +824,8 @@
     "img": "/alliados/internet-bosques.png",
     "url": "https://www.google.com/maps/search/Internet+Computacion+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0940",
-    "lon": "-98.1073"
+    "lat": "19.041440",
+    "lon": "-98.206273"
   },
   {
     "nombre": "GIMNASIO FITNESS BOSQUES",
@@ -833,8 +833,8 @@
     "img": "/alliados/gimnasio.png",
     "url": "https://www.google.com/maps/search/Gimnasio+Fitness+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0935",
-    "lon": "-98.1068"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "MATERIALES LA CONSTRUCCIÓN AMALUCAN",
@@ -842,8 +842,8 @@
     "img": "/alliados/materiales.png",
     "url": "https://www.google.com/maps/search/Materiales+Construccion+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0978",
-    "lon": "-98.1122"
+    "lat": "18.962088",
+    "lon": "-98.233962"
   },
   {
     "nombre": "TLAPALERÍA XONACATEPEC",
@@ -851,8 +851,8 @@
     "img": "/alliados/tlapaleria.png",
     "url": "https://www.google.com/maps/search/Tlapaleria+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0876",
-    "lon": "-98.1036"
+    "lat": "19.071050",
+    "lon": "-98.120362"
   },
   {
     "nombre": "FLETES Y MUDANZAS BOSQUES",
@@ -860,8 +860,8 @@
     "img": "/alliados/fletes.png",
     "url": "https://www.google.com/maps/search/Fletes+Mudanzas+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0930",
-    "lon": "-98.1060"
+    "lat": "19.062909",
+    "lon": "-98.140869"
   },
   {
     "nombre": "SERVICIO DE GRÚAS XONACATEPEC",
@@ -869,8 +869,8 @@
     "img": "/alliados/gruas.png",
     "url": "https://www.google.com/maps/search/Gruas+Xonacatepec+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0895",
-    "lon": "-98.1062"
+    "lat": "19.069027",
+    "lon": "-98.116448"
   },
   {
     "nombre": "FUMIGACIONES BOSQUES",
@@ -878,8 +878,8 @@
     "img": "/alliados/fumigaciones.png",
     "url": "https://www.google.com/maps/search/Fumigaciones+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0938",
-    "lon": "-98.1072"
+    "lat": "19.085655",
+    "lon": "-98.105338"
   },
   {
     "nombre": "TAPICERÍA AMALUCAN",
@@ -887,8 +887,8 @@
     "img": "/alliados/tapiceria.png",
     "url": "https://www.google.com/maps/search/Tapiceria+Amalucan+Puebla",
     "telefono": "",
-    "lat": "19.0982",
-    "lon": "-98.1125"
+    "lat": "19.069433",
+    "lon": "-98.127573"
   },
   {
     "nombre": "HERRERÍA Y SOLDADURA XONACATEPEC",
@@ -896,8 +896,8 @@
     "img": "/alliados/herreria.png",
     "url": "https://www.google.com/maps/search/Herreria+Soldadura+Xonacatepec+Puebla",
     "telefono": "",
-    "lat": "19.0873",
-    "lon": "-98.1042"
+    "lat": "19.056988",
+    "lon": "-98.139978"
   },
   {
     "nombre": "JOYERÍA BOSQUES",
@@ -905,8 +905,8 @@
     "img": "/alliados/joyeria.png",
     "url": "https://www.google.com/maps/search/Joyeria+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0936",
-    "lon": "-98.1070"
+    "lat": "19.056166",
+    "lon": "-98.136329"
   },
   {
     "nombre": "ROPA Y MODA EL VALLE",
@@ -914,8 +914,8 @@
     "img": "/alliados/ropa-valle.png",
     "url": "https://www.google.com/maps/search/Ropa+El+Valle+Puebla",
     "telefono": "",
-    "lat": "19.1008",
-    "lon": "-98.1155"
+    "lat": "19.683310",
+    "lon": "-97.507804"
   },
   {
     "nombre": "TIENDA DE CELULARES BOSQUES",
@@ -923,7 +923,7 @@
     "img": "/alliados/celulares.png",
     "url": "https://www.google.com/maps/search/Tienda+Celulares+Bosques+San+Sebastian+Puebla",
     "telefono": "",
-    "lat": "19.0940",
-    "lon": "-98.1074"
+    "lat": "18.990825",
+    "lon": "-98.246292"
   }
 ]
