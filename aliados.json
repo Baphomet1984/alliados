@@ -1,4 +1,6 @@
 {
+  [
+  {
   "id": "USER_001",
   "alias": "SystemGhost",
   "descripcion": "Explorador urbano y amante del caos digital",
@@ -12,4 +14,6 @@
   "whatsapp": "5212220000000",
   "nivel": 2,
   "hub": "https://hub.systemtag.mx/systemghost"
+}
+]
 }
