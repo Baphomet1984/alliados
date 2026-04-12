@@ -1,5 +1,4 @@
-{
-  [
+
   {
   "id": "USER_001",
   "alias": "SystemGhost",
@@ -15,5 +14,4 @@
   "nivel": 2,
   "hub": "https://hub.systemtag.mx/systemghost"
 }
-]
-}
+
