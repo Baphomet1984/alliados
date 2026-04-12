@@ -861,39 +861,61 @@ function buildGrid(items, isCommerce){
   }
 
   items.forEach((a,i)=>{
-    const pos=(a.lat&&a.lon)?[parseFloat(a.lat),parseFloat(a.lon)]:DEFAULT_POSITIONS[i%DEFAULT_POSITIONS.length];
+    // Coordenadas: aliados usan ubicacion.lat/lng, comercios usan lat/lon raíz
+    const rawLat = isCommerce ? (a.lat) : (a.ubicacion?.lat);
+    const rawLon = isCommerce ? (a.lon) : (a.ubicacion?.lng);
+    const pos = (rawLat && rawLon)
+      ? [parseFloat(rawLat), parseFloat(rawLon)]
+      : DEFAULT_POSITIONS[i % DEFAULT_POSITIONS.length];
 
-    // Map
+    // Map line
     const line=L.polyline([[HUB_LAT,HUB_LON],pos],{
       color:isCommerce?'#ff7a1a':'#00e5cc',
       weight:0.8,opacity:0.22,dashArray:'4 8'
     }).addTo(map);
     mapLines.push(line);
 
-    // WA message
+    // WA — aliados: campo "whatsapp", comercios: campo "telefono"
+    const waRaw = isCommerce ? (a.telefono||'') : (a.whatsapp||'');
+    const waNum = waRaw.replace(/\D/g,'');
     const waMsg = isCommerce
       ? `Hola, vi tu negocio en la Red Comercial de SYSTEMTAG y quiero más información.`
       : `Hola, te vi en la red de Aliados de SYSTEMTAG y quiero acceso a tu hub personal.`;
-    const waNum = a.telefono ? a.telefono.replace(/\D/g,'') : '';
     const waURL = waNum
-      ? `https://wa.me/52${waNum}?text=${encodeURIComponent(waMsg)}`
+      ? `https://wa.me/${waNum}?text=${encodeURIComponent(waMsg)}`
       : `https://chat.whatsapp.com/D7xEqrGxJgABFHbRQXM6tg`;
+
+    // Display name
+    const displayName = isCommerce ? (a.nombre||'') : (a.alias||a.nombre||'');
+    const displayCiudad = isCommerce ? (a.ciudad||'') : (a.ubicacion?.ciudad||'');
+    const displayColonia = isCommerce ? (a.colonia||'') : (a.ubicacion?.colonia||'');
+    const displayID = isCommerce ? `RC_${String(i+1).padStart(3,'0')}` : (a.id||`NODO_${String(i+1).padStart(3,'0')}`);
 
     // Popup
     const marker=L.marker(pos,{icon:makeSignalIcon(isCommerce)})
       .addTo(map)
       .bindPopup(`
-        <span class="pop-name${isCommerce?' commerce':''}" >◈ ${a.nombre.toUpperCase()}</span>
-        <span class="pop-status">// SEÑAL DETECTADA · NODO_${String(i+1).padStart(3,'0')}</span><br>
+        <span class="pop-name${isCommerce?' commerce':''}">◈ ${displayName.toUpperCase()}</span>
+        <span class="pop-status">// SEÑAL DETECTADA · ${displayID}</span><br>
         <span style="color:rgba(0,229,204,0.5)">LAT ${pos[0].toFixed(4)}° · LON ${pos[1].toFixed(4)}°</span><br>
-        ${a.ciudad||a.colonia?`<span style="color:rgba(0,229,204,0.5)">${a.ciudad||''}${a.colonia?' · '+a.colonia:''}</span><br>`:''}
-        ${waNum?`<br><span style="color:var(--green)">◉ ${a.telefono}</span>`:''}
+        ${displayCiudad||displayColonia?`<span style="color:rgba(0,229,204,0.5)">${displayCiudad}${displayColonia?' · '+displayColonia:''}</span><br>`:''}
+        ${waNum?`<br><span style="color:var(--green)">◉ ${waRaw}</span>`:''}
         <a class="pop-link" href="${waURL}" target="_blank">→ MENSAJE VÍA WA</a>
       `,{maxWidth:230});
     mapMarkers.push(marker);
 
     // Tag prefix
-    const prefix = isCommerce ? 'RC' : 'NODO';
+    const prefix = isCommerce ? 'RC' : (a.id || `NODO_${String(i+1).padStart(3,'0')}`);
+
+    // Aliados: campos del schema real
+    const nombre   = isCommerce ? (a.nombre||'') : (a.alias||a.nombre||'');
+    const desc     = isCommerce ? (a.desc||'')   : (a.descripcion||a.desc||'');
+    const edad     = isCommerce ? (a.edad||null) : (a.edad||null);
+    const ciudad   = isCommerce ? (a.ciudad||'') : (a.ubicacion?.ciudad||'');
+    const colonia  = isCommerce ? (a.colonia||''): (a.ubicacion?.colonia||'');
+    const giro     = isCommerce ? (a.giro||'')   : '';
+    const nivel    = !isCommerce ? (a.nivel||null) : null;
+    const hubURL   = !isCommerce ? (a.hub||null)   : null;
 
     // Card
     const card=document.createElement('div');
@@ -901,22 +923,24 @@ function buildGrid(items, isCommerce){
     card.style.animationDelay=`${i*0.08}s`;
     card.innerHTML=`
       <div class="node-img-wrap">
-        <img src="${a.img||''}" alt="${a.nombre}"
+        <img src="${a.img||''}" alt="${nombre}"
           onerror="this.parentElement.style.background='rgba(0,229,204,0.04)';this.style.display='none'">
-        <div class="node-tag${isCommerce?' commerce':''}">${prefix}_${String(i+1).padStart(3,'0')}</div>
+        <div class="node-tag${isCommerce?' commerce':''}">${isCommerce?'RC_'+String(i+1).padStart(3,'0'):a.id||'NODO'}</div>
         <div class="node-status${isCommerce?' commerce':''}">activo</div>
       </div>
       <div class="node-body">
         <div class="node-id">LAT ${pos[0].toFixed(3)}° · LON ${pos[1].toFixed(3)}° · UPLINK:ESTABLE</div>
-        <div class="node-name">${a.nombre}</div>
-        <div class="node-desc">${a.desc||''}</div>
+        <div class="node-name">${nombre}</div>
+        <div class="node-desc">${desc}</div>
       </div>
       <div class="node-meta">
-        ${a.edad?`<span><i class="ico">◈</i> ${a.edad} años</span>`:''}
-        ${a.ciudad?`<span><i class="ico">⌖</i> ${a.ciudad}</span>`:''}
-        ${a.colonia?`<span><i class="ico">◌</i> ${a.colonia}</span>`:''}
-        ${isCommerce&&a.giro?`<span><i class="ico">▸</i> ${a.giro}</span>`:''}
+        ${edad?`<span><i class="ico">◈</i> ${edad} años</span>`:''}
+        ${ciudad?`<span><i class="ico">⌖</i> ${ciudad}</span>`:''}
+        ${colonia?`<span><i class="ico">◌</i> ${colonia}</span>`:''}
+        ${giro?`<span><i class="ico">▸</i> ${giro}</span>`:''}
+        ${nivel!==null?`<span><i class="ico">▲</i> NIV.${nivel}</span>`:''}
       </div>
+      ${hubURL?`<a class="node-btn-wa" href="${hubURL}" target="_blank"><span>Ver hub personal</span></a>`:''}
       <a class="node-btn-wa${isCommerce?' commerce':''}" href="${waURL}" target="_blank">
         <span>${isCommerce?'Contactar negocio':'Pedir acceso al hub'}</span>
       </a>
