@@ -2,7 +2,7 @@
   {
     "id": "USER_001",
     "alias": "SystemFail",
-    "descripcion": "Explorador urbano y amante del caos digital y diseñador de este sitio tan chingon",
+    "descripcion": "amante del caos digital y diseñador de este sitio tan chingon",
     "edad": 41,
     "ubicacion": {
       "ciudad": "Puebla",
@@ -14,5 +14,21 @@
     "nivel": 3,
     "hub": "https://baphomet1984.github.io/systemtag/signal/unlkd",
     "img": "img-aliados/01.jpeg"
+  },
+  {
+    "id": "USER_002",
+    "alias": "Seth",
+    "descripcion": "Explorador urbano y amante del caos digital y diseñador de este sitio tan chingon",
+    "edad": 41,
+    "ubicacion": {
+      "ciudad": "Puebla",
+      "colonia": "Centro",
+      "lat": 19.0414,
+      "lng": -98.2063
+    },
+    "whatsapp": "2211789870",
+    "nivel": 3,
+    "hub": "https://baphomet1984.github.io/systemtag/signal/unlkd-2",
+    "img": "img-aliados/02.jpeg"
   }
 ]
