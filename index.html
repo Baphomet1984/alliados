@@ -841,11 +841,8 @@ const DEFAULT_POSITIONS = [
 const map = L.map('map', {
   center:[HUB_LAT,HUB_LON], zoom:13,
   zoomControl:false, attributionControl:false,
-  scrollWheelZoom:false, dragging:true,
-  doubleClickZoom:false, touchZoom:true,
-  minZoom:12, maxZoom:12,
-  maxBounds:L.latLngBounds([19.0550,-98.1400],[19.1200,-98.0600]),
-  maxBoundsViscosity:1.0,
+  scrollWheelZoom:true, dragging:true,
+  doubleClickZoom:true, touchZoom:true,
 });
 
 map.whenReady(()=>{
