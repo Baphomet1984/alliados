@@ -23,8 +23,9 @@
     "ubicacion": {
       "ciudad": "Puebla",
       "colonia": "xonacatepec",
-      "lat": 19.0414,
-      "lng": -98.2080   },
+      "lat":"",
+      "lng":"" 
+    },
     "whatsapp": "2211789870",
     "nivel": 3,
     "hub": "https://baphomet1984.github.io/systemtag/signal/unlkd-2",
