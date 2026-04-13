@@ -49,10 +49,42 @@
 
   /* ── MAP ── */
   .map-section {
-    position: relative; width: 100vw; height: 100vh;
-    min-height: 500px; margin: 0; padding: 0; left: 0;
-    display: block; overflow: hidden;
+    position: relative;
+    width: calc(100% - 3rem);
+    max-width: 960px;
+    height: 55vh;
+    min-height: 320px;
+    margin: 2rem 0;
+    border: 1px solid rgba(0,255,136,0.35);
+    box-shadow: 0 0 24px rgba(0,255,136,0.08), inset 0 0 40px rgba(0,0,0,0.4);
+    border-radius: 3px;
+    overflow: hidden;
   }
+
+  /* back to top button */
+  .back-top {
+    display: flex; align-items: center; gap: 0.6rem;
+    background: transparent;
+    border: 1px solid rgba(0,255,136,0.3);
+    color: var(--green);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 0.7rem 1.8rem;
+    cursor: pointer; text-decoration: none;
+    position: relative; overflow: hidden;
+    transition: color 0.25s, box-shadow 0.25s;
+    clip-path: polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+    margin: 0.5rem 0 0;
+  }
+  .back-top::before {
+    content:''; position:absolute; inset:0;
+    background: var(--green);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform 0.3s; z-index:0;
+  }
+  .back-top:hover { color:var(--bg); box-shadow:0 0 20px rgba(0,255,136,0.3); }
+  .back-top:hover::before { transform:scaleX(1); }
+  .back-top span { position:relative; z-index:1; }
   #map {
     position: absolute; top: 0; left: 0;
     width: 100% !important; height: 100% !important;
@@ -697,7 +729,7 @@
 </head>
 <body>
 
-<div class="stage">
+<div class="stage" id="top">
 
   <!-- SEARCH -->
   <div class="search-wrap">
@@ -755,7 +787,7 @@
 
   <!-- NAV -->
   <div class="nav-buttons">
-    <a class="nav-btn" href="https://baphomet1984.github.io/bitacora/">
+    <a class="nav-btn" href="https://baphomet1984.github.io/fail-news/">
       <span class="dot"></span><span>Bitácora</span>
     </a>
     <a class="nav-btn" href="https://baphomet1984.github.io/systemtag/gate/?lvl=core&go=signal-core">
@@ -816,6 +848,10 @@
     <div class="map-coords" id="mapCoords">LAT 19.0872° N · LON 98.1039° W · ESCANEANDO...</div>
     <div class="map-signal-count" id="signalCount">// 0 SEÑALES ACTIVAS</div>
   </div>
+
+  <button class="back-top" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})">
+    <span>▲ &nbsp;volver al inicio</span>
+  </button>
 
   <div class="sys-footer">
     RED_COMUNIDAD · aliados · red_comercial · integración manual · solo señal real<br>
