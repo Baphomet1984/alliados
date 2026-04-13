@@ -928,6 +928,25 @@ setInterval(tickCoords,2000);
 function tick(){document.getElementById('clock').textContent=new Date().toTimeString().slice(0,8);}
 setInterval(tick,1000);tick();
 
+// ══ GEOCODER ══
+const geocodeCache = {};
+
+async function geocodeCiudad(ciudad, colonia){
+  const query = [colonia, ciudad, 'México'].filter(Boolean).join(', ');
+  if(geocodeCache[query]) return geocodeCache[query];
+  try {
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1&countrycodes=mx`;
+    const res  = await fetch(url, { headers:{ 'Accept-Language':'es' } });
+    const data = await res.json();
+    if(data && data[0]){
+      const pos = [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+      geocodeCache[query] = pos;
+      return pos;
+    }
+  } catch(e){ /* falla silenciosa */ }
+  return null;
+}
+
 // ══ STATE ══
 let currentTab = 'aliados';
 let mapMarkers = [];   // current tab markers
@@ -940,7 +959,7 @@ function clearMapLayer(){
 }
 
 // ══ BUILD CARDS + MAP ══
-function buildGrid(items, isCommerce){
+async function buildGrid(items, isCommerce){
   const container = document.getElementById('communityContainer');
   const countEl   = document.getElementById('nodeCount');
   const sigCount  = document.getElementById('signalCount');
@@ -956,13 +975,25 @@ function buildGrid(items, isCommerce){
     return;
   }
 
-  items.forEach((a,i)=>{
-    // Coordenadas: aliados usan ubicacion.lat/lng, comercios usan lat/lon raíz
+  for(let i=0; i<items.length; i++){
+    const a = items[i];
+    // Coordenadas: directo del JSON si existen
     const rawLat = isCommerce ? (a.lat) : (a.ubicacion?.lat);
     const rawLon = isCommerce ? (a.lon) : (a.ubicacion?.lng);
-    const pos = (rawLat && rawLon)
-      ? [parseFloat(rawLat), parseFloat(rawLon)]
-      : DEFAULT_POSITIONS[i % DEFAULT_POSITIONS.length];
+    let pos;
+    if(rawLat && rawLon){
+      pos = [parseFloat(rawLat), parseFloat(rawLon)];
+    } else {
+      // Geocodificar por ciudad/colonia
+      const ciudad  = isCommerce ? (a.ciudad||'') : (a.ubicacion?.ciudad||'');
+      const colonia = isCommerce ? (a.colonia||'') : (a.ubicacion?.colonia||'');
+      if(ciudad){
+        const geo = await geocodeCiudad(ciudad, colonia);
+        pos = geo || DEFAULT_POSITIONS[i % DEFAULT_POSITIONS.length];
+      } else {
+        pos = DEFAULT_POSITIONS[i % DEFAULT_POSITIONS.length];
+      }
+    }
 
     // Map line
     const line=L.polyline([[HUB_LAT,HUB_LON],pos],{
@@ -1052,7 +1083,7 @@ function buildGrid(items, isCommerce){
     });
 
     container.appendChild(card);
-  });
+  }
 
   initSearch(items.length);
 }
@@ -1083,7 +1114,7 @@ async function loadTab(tab){
   try{
     const res  = await fetch(`${jsonFile}?ts=${Date.now()}`);
     const data = await res.json();
-    buildGrid(data, isCommerce);
+    await buildGrid(data, isCommerce);
   }catch(err){
     console.error('Error cargando',jsonFile,err);
     document.getElementById('communityContainer').innerHTML=
