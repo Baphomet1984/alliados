@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYSTEMTAG // PERFIL</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap');
+
+  :root {
+    --bg:      #03080d;
+    --teal:    #00e5cc;
+    --green:   #00ff88;
+    --amber:   #ffb300;
+    --red:     #ff3366;
+    --purple:  #cc44ff;
+    --magenta: #ff44cc;
+    --white:   #e8f4f0;
+    --dim:     rgba(232,244,240,0.45);
+    --panel:   rgba(3,8,13,0.82);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  /* scanlines */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 3px,
+      rgba(0,229,204,0.006) 3px, rgba(0,229,204,0.006) 4px
+    );
+    pointer-events: none; z-index: 100;
+  }
+
+  /* vignette */
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none; z-index: 99;
+  }
+
+  /* ── CANVAS BG ── */
+  #bgCanvas {
+    position: fixed; inset: 0; z-index: 0;
+  }
+
+  /* ── STAGE ── */
+  .stage {
+    position: relative; z-index: 10;
+    width: 100%; min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* ── ESTADO ERROR ── */
+  .error-state {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.2em;
+    color: var(--red); text-align: center;
+    padding: 2rem; border: 1px dashed rgba(255,51,102,0.3);
+    max-width: 400px;
+    line-height: 2;
+  }
+
+  /* ── PROFILE CARD ── */
+  .profile-card {
+    width: min(560px, 96vw);
+    background: var(--panel);
+    border: 1px solid rgba(0,229,204,0.15);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(20px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* gradient hover */
+  .profile-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--teal) 0%, transparent 55%);
+    opacity: 0.03; pointer-events: none;
+  }
+
+  /* scan sweep */
+  .profile-card::after {
+    content: '';
+    position: absolute; left:0; top:-100%;
+    width:100%; height:100%;
+    background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(0,229,204,0.04) 48%,
+      rgba(0,229,204,0.08) 50%,
+      rgba(0,229,204,0.04) 52%,
+      transparent 100%
+    );
+    pointer-events: none;
+    animation: cardScan 4s linear infinite;
+  }
+  @keyframes cardScan {
+    0%  { top:-100%; }
+    100%{ top:100%;  }
+  }
+
+  /* ── CORNER BRACKETS ── */
+  .pc-corner { position:absolute; width:20px; height:20px; z-index:5; }
+  .pc-corner.tl { top:8px;    left:8px;  border-top:1px solid var(--teal); border-left:1px solid var(--teal); }
+  .pc-corner.tr { top:8px;    right:8px; border-top:1px solid var(--teal); border-right:1px solid var(--teal); }
+  .pc-corner.bl { bottom:8px; left:8px;  border-bottom:1px solid var(--teal); border-left:1px solid var(--teal); }
+  .pc-corner.br { bottom:8px; right:8px; border-bottom:1px solid var(--teal); border-right:1px solid var(--teal); }
+
+  /* ── IMG HEADER ── */
+  .pc-img-wrap {
+    position: relative;
+    width: 100%; height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,229,204,0.1);
+  }
+
+  .pc-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.65) brightness(0.7);
+    transition: filter 0.4s;
+  }
+
+  .profile-card:hover .pc-img-wrap img {
+    filter: saturate(0.9) brightness(0.85);
+  }
+
+  /* scanlines over image */
+  .pc-img-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 3px,
+      rgba(0,229,204,0.04) 3px, rgba(0,229,204,0.04) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* tag ID */
+  .pc-tag {
+    position: absolute; top:10px; left:10px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.48rem; letter-spacing: 0.18em;
+    color: var(--teal);
+    background: rgba(3,8,13,0.85);
+    border: 1px solid rgba(0,229,204,0.25);
+    padding: 3px 8px; text-transform: uppercase; z-index:3;
+  }
+
+  /* status */
+  .pc-status {
+    position: absolute; top:10px; right:10px; z-index:3;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.45rem; letter-spacing: 0.15em;
+    padding: 3px 7px;
+    border: 1px solid rgba(0,255,136,0.3);
+    color: var(--green);
+    background: rgba(0,255,136,0.06);
+    text-transform: uppercase;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .pc-status::before {
+    content: '';
+    display: inline-block; width:4px; height:4px;
+    border-radius:50%; background:var(--green);
+    animation: blink 1.4s infinite;
+  }
+
+  /* avatar circle (centro-bajo de la imagen) */
+  .pc-avatar-wrap {
+    position: absolute;
+    bottom: -44px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+
+  .pc-avatar {
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,229,204,0.4);
+    object-fit: cover;
+    background: rgba(3,8,13,0.9);
+    filter: brightness(0.9) saturate(1.1);
+    box-shadow: 0 0 20px rgba(0,229,204,0.2), 0 0 40px rgba(0,229,204,0.08);
+    display: block;
+  }
+
+  /* ── BODY ── */
+  .pc-body {
+    padding: 3.5rem 1.6rem 1.2rem;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 0.5rem;
+  }
+
+  /* nivel */
+  .pc-level {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.48rem; letter-spacing: 0.25em;
+    color: var(--amber); opacity: 0.7;
+    text-transform: uppercase;
+  }
+
+  /* alias */
+  .pc-alias {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-weight: 900; color: var(--white);
+    letter-spacing: 0.06em; line-height: 1;
+    text-shadow: 0 0 30px rgba(0,229,204,0.25);
+    text-align: center;
+    position: relative; display: inline-block;
+  }
+
+  /* glitch en alias */
+  .pc-alias::before {
+    content: attr(data-text); position:absolute; inset:0;
+    color: var(--red); animation: glitch1 4s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  }
+  .pc-alias::after {
+    content: attr(data-text); position:absolute; inset:0;
+    color: var(--teal); animation: glitch2 4s infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  }
+  @keyframes glitch1 {
+    0%,90%,100%{transform:translate(0);opacity:0;}
+    92%{transform:translate(-4px,2px);opacity:1;}
+    94%{transform:translate(4px,-2px);opacity:1;}
+    96%{transform:translate(0);opacity:0;}
+  }
+  @keyframes glitch2 {
+    0%,90%,100%{transform:translate(0);opacity:0;}
+    93%{transform:translate(4px,-1px);opacity:1;}
+    95%{transform:translate(-3px,2px);opacity:1;}
+    97%{transform:translate(0);opacity:0;}
+  }
+
+  /* descripción */
+  .pc-desc {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.92rem; line-height: 1.65;
+    color: var(--dim); text-align: center;
+    max-width: 400px; margin-top: 0.25rem;
+  }
+
+  /* separador */
+  .pc-sep {
+    width: 100%; height: 1px; margin: 0.5rem 0;
+    background: linear-gradient(90deg, transparent, rgba(0,229,204,0.15), transparent);
+  }
+
+  /* ── META ROW ── */
+  .pc-meta {
+    display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.5rem; letter-spacing: 0.13em;
+    color: rgba(0,229,204,0.45);
+  }
+  .pc-meta span { display:flex; align-items:center; gap:0.35rem; }
+  .pc-meta .ico { opacity:0.5; font-style:normal; }
+
+  /* ── COORDS ── */
+  .pc-coords {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.46rem; letter-spacing: 0.18em;
+    color: rgba(0,229,204,0.3); margin-top: 0.2rem;
+  }
+
+  /* ── ACTIONS ── */
+  .pc-actions {
+    display: flex; flex-direction: column; gap: 0; width: 100%;
+    margin-top: 0.6rem;
+    border-top: 1px solid rgba(0,229,204,0.08);
+  }
+
+  .pc-btn-wa {
+    width:100%; background:transparent; border:none;
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+    color: var(--green);
+    font-family:'Share Tech Mono',monospace;
+    font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase;
+    padding:0.85rem 1.4rem; text-decoration:none; text-align:left;
+    cursor:pointer; transition:background 0.2s, border-color 0.2s;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .pc-btn-wa::after { content:'→'; opacity:0.5; transition:opacity 0.2s, transform 0.2s; }
+  .pc-btn-wa:hover { background:rgba(0,255,136,0.07); border-bottom-color:rgba(0,255,136,0.25); }
+  .pc-btn-wa:hover::after { opacity:1; transform:translateX(4px); }
+
+  .pc-btn-hub {
+    width:100%; background:transparent; border:none;
+    border-bottom: 1px solid rgba(0,229,204,0.08);
+    color: var(--teal);
+    font-family:'Share Tech Mono',monospace;
+    font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase;
+    padding:0.85rem 1.4rem; text-decoration:none; text-align:left;
+    cursor:pointer; transition:background 0.2s, border-color 0.2s;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .pc-btn-hub::after { content:'↗'; opacity:0.5; transition:opacity 0.2s, transform 0.2s; }
+  .pc-btn-hub:hover { background:rgba(0,229,204,0.06); border-bottom-color:rgba(0,229,204,0.3); }
+  .pc-btn-hub:hover::after { opacity:1; transform:translate(3px,-3px); }
+
+  /* ── ID FOOTER ── */
+  .pc-id-footer {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.44rem; letter-spacing: 0.2em;
+    color: rgba(0,229,204,0.2); text-align:center;
+    padding: 0.9rem 1.4rem 0.7rem;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+
+  /* ── LOADER ── */
+  .loader {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem; letter-spacing: 0.25em;
+    color: rgba(0,229,204,0.4);
+    animation: blink 1s infinite;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="stage">
+  <div id="profileMount">
+    <div class="loader">// CARGANDO PERFIL...</div>
+  </div>
+</div>
+
+<script>
+// ══ CANVAS BG ══════════════════════════════════════════════════════
+const bgCanvas = document.getElementById('bgCanvas');
+const bgCtx    = bgCanvas.getContext('2d');
+let BW, BH;
+
+function bgResize(){ BW = bgCanvas.width = window.innerWidth; BH = bgCanvas.height = window.innerHeight; }
+bgResize();
+window.addEventListener('resize', bgResize);
+
+const COL = 22;
+let cols, drops;
+function initRain(){
+  cols  = Math.floor((BW||1200) / COL);
+  drops = Array.from({length: cols}, () => Math.random() * -150);
+}
+initRain();
+window.addEventListener('resize', initRain);
+
+const SC = '01アイウ{}[];:<>∴∿⌘⚠?';
+const streams = Array.from({length: 18}, mkStream);
+function mkStream(){
+  return {
+    x: Math.random()*(BW||1200), y: Math.random()*(BH||800),
+    vy: Math.random()*0.6+0.2, len: Math.floor(Math.random()*8+4),
+    chars:[], opacity: Math.random()*0.12+0.03,
+    color: Math.random()>0.5 ? '#00e5cc' : '#00ff88'
+  };
+}
+
+let frame = 0;
+function animateBg(){
+  bgCtx.clearRect(0,0,BW,BH);
+
+  // hex dot grid
+  const sp = 38;
+  const rows = Math.ceil(BH/(sp*0.866))+2;
+  const cols2 = Math.ceil(BW/sp)+2;
+  bgCtx.fillStyle = 'rgba(0,229,204,0.1)';
+  for(let r=0;r<rows;r++) for(let c=0;c<cols2;c++){
+    const x=c*sp+(r%2===0?0:sp/2); const y=r*sp*0.866;
+    bgCtx.beginPath(); bgCtx.arc(x,y,0.7,0,Math.PI*2); bgCtx.fill();
+  }
+
+  // subtle diagonal lines
+  bgCtx.strokeStyle='rgba(0,229,204,0.012)'; bgCtx.lineWidth=1;
+  for(let x=-BH;x<BW+BH;x+=80){
+    bgCtx.beginPath(); bgCtx.moveTo(x,0); bgCtx.lineTo(x+BH,BH); bgCtx.stroke();
+  }
+
+  // data streams
+  if(frame%2===0){
+    bgCtx.font='9px "Share Tech Mono",monospace';
+    streams.forEach(s=>{
+      bgCtx.globalAlpha=s.opacity; bgCtx.fillStyle=s.color;
+      for(let i=0;i<s.len;i++){
+        if(Math.random()<0.05) s.chars[i]=SC[Math.floor(Math.random()*SC.length)];
+        if(!s.chars[i]) s.chars[i]=SC[Math.floor(Math.random()*SC.length)];
+        bgCtx.fillText(s.chars[i],s.x,s.y-i*11);
+      }
+      s.y+=s.vy;
+      if(s.y>BH+120){ Object.assign(s,mkStream()); s.x=Math.random()*BW; s.y=-20; }
+    });
+  }
+  bgCtx.globalAlpha=1;
+  frame++;
+  requestAnimationFrame(animateBg);
+}
+animateBg();
+
+// ══ LEER PARÁMETRO DE URL ══════════════════════════════════════════
+function getUserNumber(){
+  // Busca en ?go=signal-unlkd-N  o  ?user=N  o  #N
+  const params = new URLSearchParams(window.location.search);
+  const go     = params.get('go') || '';
+  const match  = go.match(/-(\d+)$/);
+  if(match) return parseInt(match[1],10);
+
+  const userParam = params.get('user') || params.get('id') || '';
+  const numMatch  = userParam.match(/(\d+)$/);
+  if(numMatch) return parseInt(numMatch[1],10);
+
+  const hash = window.location.hash.replace('#','');
+  if(/^\d+$/.test(hash)) return parseInt(hash,10);
+
+  return null;
+}
+
+// ══ NIVEL → TEXTO ═════════════════════════════════════════════════
+const LEVEL_MAP = {
+  1: '◈ NIVEL 01 · ACCESO BÁSICO',
+  2: '◈◈ NIVEL 02 · ACCESO COMPLETO',
+  3: '◈◈◈ NIVEL 03 · ROOT'
+};
+
+// ══ RENDER ════════════════════════════════════════════════════════
+function render(u){
+  const mount = document.getElementById('profileMount');
+  if(!u){
+    mount.innerHTML = `
+      <div class="error-state">
+        // USUARIO NO REGISTRADO<br>
+        ACCESO DENEGADO · NODO NO ENCONTRADO
+      </div>`;
+    return;
+  }
+
+  const nivel    = u.nivel || 1;
+  const lvlTxt   = LEVEL_MAP[nivel] || `NIVEL ${nivel}`;
+  const imgSrc   = u.img  || `https://api.dicebear.com/7.x/bottts/svg?seed=${u.id}`;
+  const waRaw    = u.whatsapp || '';
+  const waNum    = waRaw.replace(/\D/g,'');
+  const waMsg    = `Hola, te vi en la red de Aliados de SYSTEMTAG y quiero acceso a tu hub personal.`;
+  const waURL    = waNum
+    ? `https://wa.me/${waNum}?text=${encodeURIComponent(waMsg)}`
+    : `https://chat.whatsapp.com/D7xEqrGxJgABFHbRQXM6tg`;
+
+  const ciudad   = u.ubicacion?.ciudad  || '';
+  const colonia  = u.ubicacion?.colonia || '';
+  const lat      = u.ubicacion?.lat     || '';
+  const lng      = u.ubicacion?.lng     || '';
+  const coordTxt = (lat && lng)
+    ? `LAT ${lat}° · LON ${lng}°`
+    : ciudad ? `⌖ ${ciudad}${colonia ? ' · '+colonia : ''}` : '';
+
+  mount.innerHTML = `
+    <div class="profile-card">
+      <div class="pc-corner tl"></div>
+      <div class="pc-corner tr"></div>
+      <div class="pc-corner bl"></div>
+      <div class="pc-corner br"></div>
+
+      <div class="pc-img-wrap">
+        <img src="${imgSrc}" alt="${u.alias}"
+             onerror="this.parentElement.style.background='rgba(0,229,204,0.04)';this.style.display='none'">
+        <div class="pc-tag">${u.id || 'NODO'}</div>
+        <div class="pc-status">ACTIVO</div>
+        <div class="pc-avatar-wrap">
+          <img class="pc-avatar" src="${imgSrc}" alt="${u.alias}"
+               onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=${u.id}'">
+        </div>
+      </div>
+
+      <div class="pc-body">
+        <div class="pc-level">${lvlTxt}</div>
+        <div class="pc-alias" data-text="${u.alias}">${u.alias}</div>
+        ${u.descripcion ? `<div class="pc-desc">${u.descripcion}</div>` : ''}
+
+        <div class="pc-sep"></div>
+
+        <div class="pc-meta">
+          ${u.edad   ? `<span><i class="ico">◈</i> ${u.edad} años</span>`  : ''}
+          ${ciudad   ? `<span><i class="ico">⌖</i> ${ciudad}</span>`        : ''}
+          ${colonia  ? `<span><i class="ico">◌</i> ${colonia}</span>`       : ''}
+        </div>
+        ${coordTxt ? `<div class="pc-coords">${coordTxt}</div>` : ''}
+      </div>
+
+      <div class="pc-actions">
+        ${nivel >= 2 && u.hub ? `
+          <a class="pc-btn-hub" href="${u.hub}">
+            <span>▸ Ver hub personal</span>
+          </a>` : ''}
+        <a class="pc-btn-wa" href="${waURL}" target="_blank">
+          <span>◉ Pedir acceso al hub</span>
+        </a>
+      </div>
+
+      <div class="pc-id-footer">
+        ID: ${u.id || '---'} · NODE · BAPHOMET · SYSTEMTAG
+      </div>
+    </div>
+  `;
+}
+
+// ══ FETCH + BOOT ══════════════════════════════════════════════════
+const userNum = getUserNumber();
+
+fetch('aliados.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    const lista = Array.isArray(data) ? data : (data.aliados || []);
+
+    let usuario = null;
+    if(userNum !== null){
+      // Buscar por número al final del ID: USER_002 → 2
+      usuario = lista.find(u => {
+        const m = (u.id || '').match(/(\d+)$/);
+        return m && parseInt(m[1], 10) === userNum;
+      });
+    } else {
+      // Sin parámetro → mostrar el primero como fallback
+      usuario = lista[0] || null;
+    }
+
+    render(usuario);
+  })
+  .catch(() => {
+    document.getElementById('profileMount').innerHTML = `
+      <div class="error-state">
+        // ERROR · aliados.json NO ENCONTRADO<br>
+        COMPRUEBA QUE EL ARCHIVO EXISTE EN EL MISMO DIRECTORIO
+      </div>`;
+  });
+</script>
+</body>
+</html>
