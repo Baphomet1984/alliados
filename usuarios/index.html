@@ -354,7 +354,7 @@
 </div>
 
 <script>
-// ══ CANVAS BG ══════════════════════════════════════════════════════
+// ══ CANVAS BG (se queda igual) ════════════════════════════════════
 const bgCanvas = document.getElementById('bgCanvas');
 const bgCtx    = bgCanvas.getContext('2d');
 let BW, BH;
@@ -387,7 +387,6 @@ let frame = 0;
 function animateBg(){
   bgCtx.clearRect(0,0,BW,BH);
 
-  // hex dot grid
   const sp = 38;
   const rows = Math.ceil(BH/(sp*0.866))+2;
   const cols2 = Math.ceil(BW/sp)+2;
@@ -397,17 +396,16 @@ function animateBg(){
     bgCtx.beginPath(); bgCtx.arc(x,y,0.7,0,Math.PI*2); bgCtx.fill();
   }
 
-  // subtle diagonal lines
-  bgCtx.strokeStyle='rgba(0,229,204,0.012)'; bgCtx.lineWidth=1;
+  bgCtx.strokeStyle='rgba(0,229,204,0.012)';
   for(let x=-BH;x<BW+BH;x+=80){
     bgCtx.beginPath(); bgCtx.moveTo(x,0); bgCtx.lineTo(x+BH,BH); bgCtx.stroke();
   }
 
-  // data streams
   if(frame%2===0){
     bgCtx.font='9px "Share Tech Mono",monospace';
     streams.forEach(s=>{
-      bgCtx.globalAlpha=s.opacity; bgCtx.fillStyle=s.color;
+      bgCtx.globalAlpha=s.opacity;
+      bgCtx.fillStyle=s.color;
       for(let i=0;i<s.len;i++){
         if(Math.random()<0.05) s.chars[i]=SC[Math.floor(Math.random()*SC.length)];
         if(!s.chars[i]) s.chars[i]=SC[Math.floor(Math.random()*SC.length)];
@@ -423,25 +421,7 @@ function animateBg(){
 }
 animateBg();
 
-// ══ LEER PARÁMETRO DE URL ══════════════════════════════════════════
-function getUserNumber(){
-  // Busca en ?go=signal-unlkd-N  o  ?user=N  o  #N
-  const params = new URLSearchParams(window.location.search);
-  const go     = params.get('go') || '';
-  const match  = go.match(/-(\d+)$/);
-  if(match) return parseInt(match[1],10);
-
-  const userParam = params.get('user') || params.get('id') || '';
-  const numMatch  = userParam.match(/(\d+)$/);
-  if(numMatch) return parseInt(numMatch[1],10);
-
-  const hash = window.location.hash.replace('#','');
-  if(/^\d+$/.test(hash)) return parseInt(hash,10);
-
-  return null;
-}
-
-// ══ NIVEL → TEXTO ═════════════════════════════════════════════════
+// ══ NIVEL MAP ═════════════════════════════════════════════════════
 const LEVEL_MAP = {
   1: '◈ NIVEL 01 · ACCESO BÁSICO',
   2: '◈◈ NIVEL 02 · ACCESO COMPLETO',
@@ -451,11 +431,12 @@ const LEVEL_MAP = {
 // ══ RENDER ════════════════════════════════════════════════════════
 function render(u){
   const mount = document.getElementById('profileMount');
+
   if(!u){
     mount.innerHTML = `
       <div class="error-state">
-        // USUARIO NO REGISTRADO<br>
-        ACCESO DENEGADO · NODO NO ENCONTRADO
+        // SIN DATOS EN aliados.json<br>
+        TU RED ESTÁ MÁS VACÍA QUE PROMESA POLÍTICA
       </div>`;
     return;
   }
@@ -465,8 +446,9 @@ function render(u){
   const imgSrc   = u.img  || `https://api.dicebear.com/7.x/bottts/svg?seed=${u.id}`;
   const waRaw    = u.whatsapp || '';
   const waNum    = waRaw.replace(/\D/g,'');
-  const waMsg    = `Hola, te vi en la red de Aliados de SYSTEMTAG y quiero acceso a tu hub personal.`;
-  const waURL    = waNum
+
+  const waMsg = `Hola, te vi en SYSTEMTAG y quiero acceso a tu hub.`;
+  const waURL = waNum
     ? `https://wa.me/${waNum}?text=${encodeURIComponent(waMsg)}`
     : `https://chat.whatsapp.com/D7xEqrGxJgABFHbRQXM6tg`;
 
@@ -474,6 +456,7 @@ function render(u){
   const colonia  = u.ubicacion?.colonia || '';
   const lat      = u.ubicacion?.lat     || '';
   const lng      = u.ubicacion?.lng     || '';
+
   const coordTxt = (lat && lng)
     ? `LAT ${lat}° · LON ${lng}°`
     : ciudad ? `⌖ ${ciudad}${colonia ? ' · '+colonia : ''}` : '';
@@ -486,13 +469,12 @@ function render(u){
       <div class="pc-corner br"></div>
 
       <div class="pc-img-wrap">
-        <img src="${imgSrc}" alt="${u.alias}"
-             onerror="this.parentElement.style.background='rgba(0,229,204,0.04)';this.style.display='none'">
+        <img src="${imgSrc}">
         <div class="pc-tag">${u.id || 'NODO'}</div>
         <div class="pc-status">ACTIVO</div>
+
         <div class="pc-avatar-wrap">
-          <img class="pc-avatar" src="${imgSrc}" alt="${u.alias}"
-               onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=${u.id}'">
+          <img class="pc-avatar" src="${imgSrc}">
         </div>
       </div>
 
@@ -504,57 +486,45 @@ function render(u){
         <div class="pc-sep"></div>
 
         <div class="pc-meta">
-          ${u.edad   ? `<span><i class="ico">◈</i> ${u.edad} años</span>`  : ''}
-          ${ciudad   ? `<span><i class="ico">⌖</i> ${ciudad}</span>`        : ''}
-          ${colonia  ? `<span><i class="ico">◌</i> ${colonia}</span>`       : ''}
+          ${u.edad ? `<span>◈ ${u.edad} años</span>` : ''}
+          ${ciudad ? `<span>⌖ ${ciudad}</span>` : ''}
+          ${colonia ? `<span>◌ ${colonia}</span>` : ''}
         </div>
+
         ${coordTxt ? `<div class="pc-coords">${coordTxt}</div>` : ''}
       </div>
 
       <div class="pc-actions">
         ${nivel >= 2 && u.hub ? `
-          <a class="pc-btn-hub" href="${u.hub}">
-            <span>▸ Ver hub personal</span>
-          </a>` : ''}
+        <a class="pc-btn-hub" href="${u.hub}">
+          <span>▸ Ver hub personal</span>
+        </a>` : ''}
+
         <a class="pc-btn-wa" href="${waURL}" target="_blank">
-          <span>◉ Pedir acceso al hub</span>
+          <span>◉ Pedir acceso</span>
         </a>
       </div>
 
       <div class="pc-id-footer">
-        ID: ${u.id || '---'} · NODE · BAPHOMET · SYSTEMTAG
+        ID: ${u.id || '---'} · SYSTEMTAG
       </div>
     </div>
   `;
 }
 
-// ══ FETCH + BOOT ══════════════════════════════════════════════════
-const userNum = getUserNumber();
-
+// ══ FETCH DIRECTO (SIN PARAMETROS) ════════════════════════════════
 fetch('../alliados/aliados.json?v=' + Date.now())
   .then(r => r.json())
   .then(data => {
     const lista = Array.isArray(data) ? data : (data.aliados || []);
-
-    let usuario = null;
-    if(userNum !== null){
-      // Buscar por número al final del ID: USER_002 → 2
-      usuario = lista.find(u => {
-        const m = (u.id || '').match(/(\d+)$/);
-        return m && parseInt(m[1], 10) === userNum;
-      });
-    } else {
-      // Sin parámetro → mostrar el primero como fallback
-      usuario = lista[0] || null;
-    }
-
+    const usuario = lista[0] || null;
     render(usuario);
   })
   .catch(() => {
     document.getElementById('profileMount').innerHTML = `
       <div class="error-state">
-        // ERROR · aliados.json NO ENCONTRADO<br>
-        COMPRUEBA QUE EL ARCHIVO EXISTE EN EL MISMO DIRECTORIO
+        // ERROR CARGANDO aliados.json<br>
+        ALGO SE ROMPIÓ... COMO SIEMPRE
       </div>`;
   });
 </script>
