@@ -460,6 +460,8 @@ function render(u){
   const coordTxt = (lat && lng)
     ? `LAT ${lat}° · LON ${lng}°`
     : ciudad ? `⌖ ${ciudad}${colonia ? ' · '+colonia : ''}` : '';
+const sCoreURL = "https://baphomet1984.github.io/systemtag/gate/?lvl=core&go=signal-core"; // cámbialo
+const joinURL  = "https://chat.whatsapp.com/D7xEqrGxJgABFHbRQXM6tg"; // cámbialo
 
   mount.innerHTML = `
     <div class="profile-card">
@@ -494,16 +496,27 @@ function render(u){
         ${coordTxt ? `<div class="pc-coords">${coordTxt}</div>` : ''}
       </div>
 
-      <div class="pc-actions">
-        ${nivel >= 2 && u.hub ? `
-        <a class="pc-btn-hub" href="${u.hub}">
-          <span>▸ Ver hub personal</span>
-        </a>` : ''}
+         <!-- NIVEL 1: PÚBLICO -->
+    <a class="pc-btn-hub" href="${sCoreURL}" target="_blank">
+      <span>▸ Acceder a S.Core</span>
+    </a>
 
-        <a class="pc-btn-wa" href="${waURL}" target="_blank">
-          <span>◉ Pedir acceso</span>
-        </a>
-      </div>
+    <a class="pc-btn-wa" href="${joinURL}" target="_blank">
+      <span>◉ Unirse a SystemTag</span>
+    </a>
+
+    <!-- NIVEL 2+: HUB PERSONAL -->
+    ${nivel >= 2 && u.hub ? `
+      <a class="pc-btn-hub" href="${u.hub}">
+        <span>▸ Ver hub personal</span>
+      </a>
+    ` : ''}
+
+    <!-- TODOS: PEDIR ACCESO -->
+    <a class="pc-btn-wa" href="${waURL}" target="_blank">
+      <span>◉ Pedir acceso al hub</span>
+    </a>
+
 
       <div class="pc-id-footer">
         ID: ${u.id || '---'} · SYSTEMTAG
